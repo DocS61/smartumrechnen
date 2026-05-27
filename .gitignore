@@ -39,3 +39,6 @@ tsconfig.tsbuildinfo
 *.log
 coverage/
 .deploy/
+*.docx
+*.pdf
+node_modules
