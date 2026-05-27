@@ -39,7 +39,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link href="/#alle">
-            <Button variant="ghost" size="sm" className="text-sm text-muted-foreground">
+            <Button size="sm" className="text-sm bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">
               Alle 15 →
             </Button>
           </Link>

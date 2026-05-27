@@ -25,6 +25,24 @@ interface ConverterPageProps {
   slug: string
 }
 
+const COMPOUND_NAMES: Record<string, string> = {
+  laenge: 'Längen-Umrechner',
+  gewicht: 'Gewichts-Umrechner',
+  temperatur: 'Temperatur-Umrechner',
+  waehrung: 'Währungs-Umrechner',
+  flaeche: 'Flächen-Umrechner',
+  volumen: 'Volumen-Umrechner',
+  geschwindigkeit: 'Geschwindigkeits-Umrechner',
+  kleidergroessen: 'Kleidergrößen-Umrechner',
+  schuhgroessen: 'Schuhgrößen-Umrechner',
+  kochmasse: 'Kochmaß-Umrechner',
+  vitamine: 'Vitamin-Umrechner',
+  datengroessen: 'Datengrößen-Umrechner',
+  kraftstoffverbrauch: 'Kraftstoffverbrauchs-Umrechner',
+  druck: 'Druck-Umrechner',
+  leistung: 'Leistungs-Umrechner',
+}
+
 export function ConverterPage({ slug }: ConverterPageProps) {
   const cat = getCategoryBySlug(slug ?? '')
   if (!cat) return <div className="p-8 text-center">Kategorie nicht gefunden.</div>
@@ -49,7 +67,7 @@ export function ConverterPage({ slug }: ConverterPageProps) {
               </div>
               <div>
                 <h1 className="font-display text-2xl md:text-3xl font-bold tracking-tight">
-                  {cat?.name ?? ''} Umrechner
+                  {COMPOUND_NAMES[slug] ?? `${cat?.name ?? ''}-Umrechner`}
                 </h1>
                 <p className="text-muted-foreground text-sm">{cat?.description ?? ''}</p>
               </div>
@@ -112,7 +130,7 @@ export function ConverterPage({ slug }: ConverterPageProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
-            name: `${cat?.name ?? ''} Umrechner - SmartUmrechnen`,
+            name: `${COMPOUND_NAMES[slug] ?? `${cat?.name ?? ''}-Umrechner`} - SmartUmrechnen`,
             description: cat?.description ?? '',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'All',

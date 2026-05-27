@@ -27,7 +27,7 @@ export default function BarChartVisual({ data, color }: BarChartVisualProps) {
             label={{ value: 'Wert', angle: -90, position: 'insideLeft', style: { textAnchor: 'middle', fontSize: 11 } }}
           />
           <Tooltip contentStyle={{ fontSize: 11 }} />
-          <Bar dataKey="value" fill={color ?? '#0EA5E9'} radius={[4, 4, 0, 0]} />
+          <Bar dataKey="value" name="Wert" fill={color ?? '#0EA5E9'} radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
