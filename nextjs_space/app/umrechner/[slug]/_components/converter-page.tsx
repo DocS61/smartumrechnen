@@ -72,6 +72,11 @@ export function ConverterPage({ slug }: ConverterPageProps) {
         <CountryPresets />
       </section>
 
+      {/* Ad - Bottom */}
+      <div className="max-w-[1200px] mx-auto px-4 py-4">
+        <AdBanner slot={`converter-${slug}-bottom`} />
+      </div>
+
       {/* Related Converters */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">
         <SlideIn from="bottom">

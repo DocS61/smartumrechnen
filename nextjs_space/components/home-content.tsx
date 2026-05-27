@@ -141,6 +141,11 @@ export function HomeContent() {
         </Stagger>
       </section>
 
+      {/* Ad Banner - Bottom */}
+      <div className="max-w-[1200px] mx-auto px-4 py-4">
+        <AdBanner slot="home-bottom" />
+      </div>
+
       {/* Bottom: Presets + History */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
