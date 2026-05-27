@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-const viewportConfig = { once: true, margin: '-60px' as `${number}px` }
+const viewportConfig = { once: true, margin: '0px' as `${number}px`, amount: 0.01 }
 
 export function FadeIn({
   children, delay = 0, duration = 0.4, className,
