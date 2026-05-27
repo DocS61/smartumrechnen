@@ -25,7 +25,6 @@ export const metadata = {
     description: 'Kostenloser Online-Umrechner mit 15 Kategorien. Smart-Vorschläge, Live-Währungskurse und Offline-Modus.',
     type: 'website',
     locale: 'de_DE',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 }
 

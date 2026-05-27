@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     description: 'Rechne Länge, Gewicht, Temperatur, Währung und 11 weitere Kategorien sofort um. Kostenlos, präzise und offline verfügbar.',
     type: 'website',
     locale: 'de_DE',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 }
 
