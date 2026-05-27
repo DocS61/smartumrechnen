@@ -21,7 +21,7 @@ export function ConversionChart({ units, fromUnit, value, convert, color }: Conv
   const chartData = safeUnits
     .filter((u: UnitDef) => u?.id !== fromUnit)
     .map((u: UnitDef) => ({
-      name: u?.symbol ?? '',
+      name: `${u?.name ?? ''} (${u?.symbol ?? ''})`,
       value: convert(value, fromUnit, u?.id ?? ''),
     }))
     .filter((d: any) => isFinite(d?.value ?? 0) && Math.abs(d?.value ?? 0) < 1e12)
