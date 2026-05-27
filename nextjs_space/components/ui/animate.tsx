@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import React from 'react'
 
 export function FadeIn({
   children, delay = 0, duration = 0.4, className,
@@ -8,14 +8,12 @@ export function FadeIn({
   children: React.ReactNode; delay?: number; duration?: number; className?: string
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration, delay, ease: 'easeOut' }}
-      className={className}
+    <div
+      className={`animate-fade-in ${className ?? ''}`}
+      style={{ animationDelay: `${delay}s`, animationDuration: `${duration}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -25,38 +23,31 @@ export function ScaleIn({
   children: React.ReactNode; delay?: number; className?: string
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3, delay, ease: 'easeOut' }}
-      className={className}
+    <div
+      className={`animate-scale-in ${className ?? ''}`}
+      style={{ animationDelay: `${delay}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   )
-}
-
-const slideDirections = {
-  bottom: { y: 20, x: 0 },
-  top:    { y: -20, x: 0 },
-  left:   { x: -20, y: 0 },
-  right:  { x: 20, y: 0 },
 }
 
 export function SlideIn({
   children, from = 'bottom', delay = 0, className,
 }: {
-  children: React.ReactNode; from?: keyof typeof slideDirections; delay?: number; className?: string
+  children: React.ReactNode; from?: 'bottom' | 'top' | 'left' | 'right'; delay?: number; className?: string
 }) {
+  const animClass = from === 'left' ? 'animate-slide-in-left'
+    : from === 'right' ? 'animate-slide-in-right'
+    : from === 'top' ? 'animate-slide-in-top'
+    : 'animate-fade-in'
   return (
-    <motion.div
-      initial={{ opacity: 0, ...slideDirections[from] }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.4, delay, ease: 'easeOut' }}
-      className={className}
+    <div
+      className={`${animClass} ${className ?? ''}`}
+      style={{ animationDelay: `${delay}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -66,35 +57,29 @@ export function Stagger({
   children: React.ReactNode; staggerDelay?: number; className?: string
 }) {
   return (
-    <motion.div
-      variants={{
-        hidden: {},
-        show: { transition: { staggerChildren: staggerDelay } },
-      }}
-      initial="hidden"
-      animate="show"
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <div className={className}>
+      {React.Children.map(children, (child, i) => {
+        if (!React.isValidElement(child)) return child
+        return React.cloneElement(child as React.ReactElement<any>, {
+          style: { ...(child.props?.style ?? {}), animationDelay: `${i * staggerDelay}s` },
+        })
+      })}
+    </div>
   )
 }
 
 export function StaggerItem({
-  children, className,
+  children, className, style,
 }: {
-  children: React.ReactNode; className?: string
+  children: React.ReactNode; className?: string; style?: React.CSSProperties
 }) {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 16 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-      }}
-      className={className}
+    <div
+      className={`animate-stagger-item ${className ?? ''}`}
+      style={style}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -104,13 +89,9 @@ export function HoverLift({
   children: React.ReactNode; className?: string
 }) {
   return (
-    <motion.div
-      whileHover={{ y: -2, boxShadow: 'var(--shadow-lg)' }}
-      transition={{ duration: 0.15, ease: 'easeOut' }}
-      className={className}
-    >
+    <div className={`transition-all duration-150 ease-out hover:-translate-y-0.5 hover:shadow-lg ${className ?? ''}`}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -120,22 +101,14 @@ export function PressScale({
   children: React.ReactNode; className?: string
 }) {
   return (
-    <motion.div
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.1, ease: 'easeOut' }}
-      className={className}
-    >
+    <div className={`active:scale-[0.98] transition-transform duration-100 ${className ?? ''}`}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
 export function SkeletonPulse({ className }: { className?: string }) {
   return (
-    <motion.div
-      animate={{ opacity: [0.4, 1, 0.4] }}
-      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-      className={`rounded-md bg-muted ${className ?? ''}`}
-    />
+    <div className={`rounded-md bg-muted animate-pulse ${className ?? ''}`} />
   )
 }

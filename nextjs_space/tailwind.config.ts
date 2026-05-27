@@ -87,6 +87,26 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateY(8px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        'scale-in': {
+          from: { opacity: '0', transform: 'scale(0.95)' },
+          to: { opacity: '1', transform: 'scale(1)' },
+        },
+        'slide-in-left': {
+          from: { opacity: '0', transform: 'translateX(-20px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slide-in-right': {
+          from: { opacity: '0', transform: 'translateX(20px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slide-in-top': {
+          from: { opacity: '0', transform: 'translateY(-20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        'stagger-item': {
+          from: { opacity: '0', transform: 'translateY(16px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
         'fade-out': {
           from: { opacity: '1' },
           to: { opacity: '0' },
@@ -100,7 +120,12 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.4s ease-out',
+        'fade-in': 'fade-in 0.4s ease-out both',
+        'scale-in': 'scale-in 0.3s ease-out both',
+        'slide-in-left': 'slide-in-left 0.4s ease-out both',
+        'slide-in-right': 'slide-in-right 0.4s ease-out both',
+        'slide-in-top': 'slide-in-top 0.4s ease-out both',
+        'stagger-item': 'stagger-item 0.4s ease-out both',
         'fade-out': 'fade-out 0.2s ease-out',
       },
     },
