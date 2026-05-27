@@ -1,0 +1,47 @@
+import { MetadataRoute } from 'next'
+import { categories } from '@/lib/converter-data'
+import { headers } from 'next/headers'
+
+export const dynamic = 'force-dynamic'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const headersList = headers()
+  const host = headersList?.get?.('x-forwarded-host') ?? 'smartumrechnen.de'
+  const protocol = 'https'
+  const siteUrl = `${protocol}://${host}`
+
+  const converterPages = (categories ?? []).map((cat: any) => ({
+    url: `${siteUrl}/umrechner/${cat?.slug ?? ''}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [
+    {
+      url: siteUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    ...converterPages,
+    {
+      url: `${siteUrl}/impressum`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${siteUrl}/datenschutz`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${siteUrl}/disclaimer`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "SmartUmrechnen",
+  "short_name": "Umrechnen",
+  "description": "Intelligente Einheiten-Umrechnung mit 15 Kategorien",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0EA5E9",
+  "orientation": "portrait-primary",
+  "lang": "de",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
