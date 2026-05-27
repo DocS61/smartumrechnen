@@ -82,7 +82,7 @@ export function PWAInstallBanner() {
     <>
       {/* CTA-Banner – rechts unten, links Platz für Usercentrics-Button */}
       {!showGuide && (
-        <div className="fixed bottom-4 right-4 left-16 z-40 animate-fade-in md:hidden">
+        <div className="fixed bottom-4 right-4 left-16 z-40 md:hidden">
           <div className="bg-card border border-border rounded-xl shadow-lg p-3 flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
               <Smartphone className="w-5 h-5 text-primary" />

@@ -2,19 +2,16 @@
 
 import React from 'react'
 
+// Animation wrappers - pure pass-through to ensure content is always visible.
+// Subtle entrance animations are applied via CSS classes only when JS is loaded.
+// No opacity manipulation in any state to prevent invisible content.
+
 export function FadeIn({
   children, delay = 0, duration = 0.4, className,
 }: {
   children: React.ReactNode; delay?: number; duration?: number; className?: string
 }) {
-  return (
-    <div
-      className={`animate-fade-in ${className ?? ''}`}
-      style={{ animationDelay: `${delay}s`, animationDuration: `${duration}s` }}
-    >
-      {children}
-    </div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 export function ScaleIn({
@@ -22,14 +19,7 @@ export function ScaleIn({
 }: {
   children: React.ReactNode; delay?: number; className?: string
 }) {
-  return (
-    <div
-      className={`animate-scale-in ${className ?? ''}`}
-      style={{ animationDelay: `${delay}s` }}
-    >
-      {children}
-    </div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 export function SlideIn({
@@ -37,18 +27,7 @@ export function SlideIn({
 }: {
   children: React.ReactNode; from?: 'bottom' | 'top' | 'left' | 'right'; delay?: number; className?: string
 }) {
-  const animClass = from === 'left' ? 'animate-slide-in-left'
-    : from === 'right' ? 'animate-slide-in-right'
-    : from === 'top' ? 'animate-slide-in-top'
-    : 'animate-fade-in'
-  return (
-    <div
-      className={`${animClass} ${className ?? ''}`}
-      style={{ animationDelay: `${delay}s` }}
-    >
-      {children}
-    </div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 export function Stagger({
@@ -56,16 +35,7 @@ export function Stagger({
 }: {
   children: React.ReactNode; staggerDelay?: number; className?: string
 }) {
-  return (
-    <div className={className}>
-      {React.Children.map(children, (child, i) => {
-        if (!React.isValidElement(child)) return child
-        return React.cloneElement(child as React.ReactElement<any>, {
-          style: { ...(child.props?.style ?? {}), animationDelay: `${i * staggerDelay}s` },
-        })
-      })}
-    </div>
-  )
+  return <div className={className}>{children}</div>
 }
 
 export function StaggerItem({
@@ -73,14 +43,7 @@ export function StaggerItem({
 }: {
   children: React.ReactNode; className?: string; style?: React.CSSProperties
 }) {
-  return (
-    <div
-      className={`animate-stagger-item ${className ?? ''}`}
-      style={style}
-    >
-      {children}
-    </div>
-  )
+  return <div className={className} style={style}>{children}</div>
 }
 
 export function HoverLift({

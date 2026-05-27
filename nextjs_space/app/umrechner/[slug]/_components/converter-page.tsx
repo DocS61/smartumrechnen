@@ -3,7 +3,6 @@
 import { getCategoryBySlug, categories, type ConverterCategory } from '@/lib/converter-data'
 import { ConverterShell } from '@/components/converter-shell'
 import { ConversionChart } from '@/components/conversion-chart'
-import { CountryPresets } from '@/components/country-presets'
 import { AdBanner } from '@/components/ad-banner'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
@@ -83,16 +82,6 @@ export function ConverterPage({ slug }: ConverterPageProps) {
         {renderConverter(cat)}
       </section>
 
-      {/* Ad */}
-      <div className="max-w-[1200px] mx-auto px-4 py-6">
-        <AdBanner slot={`converter-${slug}`} />
-      </div>
-
-      {/* Country Presets */}
-      <section className="max-w-[1200px] mx-auto px-4 py-6">
-        <CountryPresets />
-      </section>
-
       {/* SEO Content */}
       {seoContentMap[slug] && (
         <>
@@ -101,15 +90,20 @@ export function ConverterPage({ slug }: ConverterPageProps) {
         </>
       )}
 
-      {/* Ad - Bottom */}
-      <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <AdBanner slot={`converter-${slug}-bottom`} />
+      {/* Ad */}
+      <div className="max-w-[1200px] mx-auto px-4 py-6">
+        <AdBanner slot={`converter-${slug}`} />
       </div>
 
       {/* FAQ */}
       {seoContentMap[slug]?.faqs && (
         <FAQSection faqs={seoContentMap[slug].faqs} />
       )}
+
+      {/* Ad - Bottom */}
+      <div className="max-w-[1200px] mx-auto px-4 py-4">
+        <AdBanner slot={`converter-${slug}-bottom`} />
+      </div>
 
       {/* Related Converters */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">
