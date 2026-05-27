@@ -51,6 +51,18 @@ export function getHistory(): HistoryEntry[] {
 
 export function addHistory(entry: Omit<HistoryEntry, 'id' | 'timestamp'>): void {
   const history = getHistory()
+  // Deduplizierung: Überspringen wenn der letzte Eintrag identisch ist
+  const last = history?.[0]
+  if (
+    last &&
+    last.category === entry.category &&
+    last.fromUnit === entry.fromUnit &&
+    last.toUnit === entry.toUnit &&
+    last.fromValue === entry.fromValue &&
+    last.toValue === entry.toValue
+  ) {
+    return
+  }
   const newEntry: HistoryEntry = {
     ...(entry ?? {}),
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,

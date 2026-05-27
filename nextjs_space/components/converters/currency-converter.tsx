@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { ArrowLeftRight, RefreshCw, WifiOff, Wifi, Copy, Check, Star, StarOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -48,6 +48,8 @@ export function CurrencyConverter() {
   const [lastUpdate, setLastUpdate] = useState<string>('')
   const [copied, setCopied] = useState(false)
   const [isFav, setIsFav] = useState(false)
+  const userInteracted = useRef(false)
+  const initialRender = useRef(true)
 
   const fetchRates = useCallback(async () => {
     setLoading(true)
@@ -93,6 +95,7 @@ export function CurrencyConverter() {
   const result = convert(numValue, fromCurrency, toCurrency)
 
   const handleSwap = () => {
+    userInteracted.current = true
     setFromCurrency(toCurrency)
     setToCurrency(fromCurrency)
   }
@@ -112,10 +115,15 @@ export function CurrencyConverter() {
   }
 
   useEffect(() => {
-    if (numValue !== 0 && Object.keys(rates ?? {}).length > 0) {
-      addHistory({ category: 'waehrung', fromUnit: fromCurrency, toUnit: toCurrency, fromValue: numValue, toValue: result })
+    if (initialRender.current) {
+      initialRender.current = false
+      return
     }
-  }, [result])
+    if (numValue !== 0 && Object.keys(rates ?? {}).length > 0 && userInteracted.current) {
+      addHistory({ category: 'waehrung', fromUnit: fromCurrency, toUnit: toCurrency, fromValue: numValue, toValue: result })
+      userInteracted.current = false
+    }
+  }, [result, fromCurrency, toCurrency, numValue])
 
   return (
     <div className="space-y-6">
@@ -145,7 +153,7 @@ export function CurrencyConverter() {
                 <label className="text-sm font-medium text-muted-foreground">Von</label>
                 <select
                   value={fromCurrency}
-                  onChange={(e: any) => setFromCurrency(e?.target?.value ?? 'EUR')}
+                  onChange={(e: any) => { userInteracted.current = true; setFromCurrency(e?.target?.value ?? 'EUR') }}
                   className="w-full h-10 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   {CURRENCIES.map((c: any) => (
@@ -155,7 +163,7 @@ export function CurrencyConverter() {
                 <Input
                   type="number"
                   value={inputValue}
-                  onChange={(e: any) => setInputValue(e?.target?.value ?? '')}
+                  onChange={(e: any) => { userInteracted.current = true; setInputValue(e?.target?.value ?? '') }}
                   className="text-2xl font-mono h-14"
                   placeholder="Betrag eingeben..."
                 />
@@ -171,7 +179,7 @@ export function CurrencyConverter() {
                 <label className="text-sm font-medium text-muted-foreground">Nach</label>
                 <select
                   value={toCurrency}
-                  onChange={(e: any) => setToCurrency(e?.target?.value ?? 'USD')}
+                  onChange={(e: any) => { userInteracted.current = true; setToCurrency(e?.target?.value ?? 'USD') }}
                   className="w-full h-10 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   {CURRENCIES.map((c: any) => (

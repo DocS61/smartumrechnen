@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { ArrowLeftRight, Star, StarOff, Copy, Check, BarChart3 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -37,6 +37,8 @@ export function ConverterShell({
   const [isFav, setIsFav] = useState(false)
   const [copied, setCopied] = useState(false)
   const [showChain, setShowChain] = useState(false)
+  const userInteracted = useRef(false)
+  const initialRender = useRef(true)
 
   useEffect(() => {
     setIsFav(isFavorite({ category: categorySlug, fromUnit, toUnit }))
@@ -55,6 +57,7 @@ export function ConverterShell({
   const result = convert(numValue, fromUnit, toUnit)
 
   const handleSwap = () => {
+    userInteracted.current = true
     setFromUnit(toUnit)
     setToUnit(fromUnit)
   }
@@ -74,7 +77,11 @@ export function ConverterShell({
   }
 
   useEffect(() => {
-    if (numValue !== 0) {
+    if (initialRender.current) {
+      initialRender.current = false
+      return
+    }
+    if (numValue !== 0 && userInteracted.current) {
       addHistory({
         category: categorySlug,
         fromUnit,
@@ -82,8 +89,9 @@ export function ConverterShell({
         fromValue: numValue,
         toValue: result,
       })
+      userInteracted.current = false
     }
-  }, [result])
+  }, [result, categorySlug, fromUnit, toUnit, numValue])
 
   const fromUnitDef = safeUnits?.find((u: UnitDef) => u?.id === fromUnit)
   const toUnitDef = safeUnits?.find((u: UnitDef) => u?.id === toUnit)
@@ -99,7 +107,7 @@ export function ConverterShell({
                 <label className="text-sm font-medium text-muted-foreground">Von</label>
                 <select
                   value={fromUnit}
-                  onChange={(e: any) => setFromUnit(e?.target?.value ?? '')}
+                  onChange={(e: any) => { userInteracted.current = true; setFromUnit(e?.target?.value ?? '') }}
                   className="w-full h-10 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   {safeUnits.map((u: UnitDef) => (
@@ -109,7 +117,7 @@ export function ConverterShell({
                 <Input
                   type="number"
                   value={inputValue}
-                  onChange={(e: any) => setInputValue(e?.target?.value ?? '')}
+                  onChange={(e: any) => { userInteracted.current = true; setInputValue(e?.target?.value ?? '') }}
                   className="text-2xl font-mono h-14"
                   placeholder="Wert eingeben..."
                 />
@@ -131,7 +139,7 @@ export function ConverterShell({
                 <label className="text-sm font-medium text-muted-foreground">Nach</label>
                 <select
                   value={toUnit}
-                  onChange={(e: any) => setToUnit(e?.target?.value ?? '')}
+                  onChange={(e: any) => { userInteracted.current = true; setToUnit(e?.target?.value ?? '') }}
                   className="w-full h-10 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   {safeUnits.map((u: UnitDef) => (
