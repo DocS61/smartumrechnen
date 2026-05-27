@@ -19,44 +19,38 @@ interface CountryPreset {
 
 const PRESETS: CountryPreset[] = [
   {
-    id: 'schweiz', name: 'Schweiz', flag: '🇨🇭',
-    currency: { code: 'CHF', name: 'Schweizer Franken', symbol: 'CHF' },
+    id: 'usa', name: 'USA', flag: '🇺🇸',
+    currency: { code: 'USD', name: 'US-Dollar', symbol: '$' },
     conversions: [
-      { label: 'Kraftstoff', from: 'l/100km', to: 'km/l', example: '7 l/100km = 14,3 km/l', slug: 'kraftstoffverbrauch' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb', slug: 'gewicht' },
-      { label: 'Fläche', from: 'm²', to: 'Ar', example: '100 m² = 1 Ar', slug: 'flaeche' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '0°C = 32°F', slug: 'temperatur' },
+      { label: 'Entfernung', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
+      { label: 'Geschwindigkeit', from: 'km/h', to: 'mph', example: '100 km/h = 62,14 mph', slug: 'geschwindigkeit' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F', slug: 'temperatur' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb', slug: 'gewicht' },
+      { label: 'Volumen', from: 'Liter', to: 'US-Gallonen', example: '1 L = 0,264 gal', slug: 'volumen' },
     ],
   },
   {
     id: 'uk', name: 'Großbritannien', flag: '🇬🇧',
     currency: { code: 'GBP', name: 'Britisches Pfund', symbol: '£' },
     conversions: [
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
+      { label: 'Entfernung', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
       { label: 'Gewicht', from: 'kg', to: 'Stone', example: '80 kg = 12,6 st', slug: 'gewicht' },
-      { label: 'Volumen', from: 'Liter', to: 'UK-Gal.', example: '1 L = 0,22 gal', slug: 'volumen' },
+      { label: 'Volumen', from: 'Liter', to: 'Imp. Gallonen', example: '1 L = 0,22 gal', slug: 'volumen' },
       { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F', slug: 'temperatur' },
     ],
   },
   {
-    id: 'usa', name: 'USA', flag: '🇺🇸',
-    currency: { code: 'USD', name: 'US-Dollar', symbol: '$' },
+    id: 'schweiz', name: 'Schweiz', flag: '🇨🇭',
+    currency: { code: 'CHF', name: 'Schweizer Franken', symbol: 'CHF' },
     conversions: [
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F', slug: 'temperatur' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb', slug: 'gewicht' },
-      { label: 'Volumen', from: 'Liter', to: 'Gallonen', example: '1 L = 0,264 gal', slug: 'volumen' },
-      { label: 'Geschwindigkeit', from: 'km/h', to: 'mph', example: '100 km/h = 62,14 mph', slug: 'geschwindigkeit' },
+      { label: 'Währung', from: 'EUR', to: 'CHF', example: 'Wechselkurs siehe oben', slug: 'waehrung' },
     ],
   },
   {
     id: 'tuerkei', name: 'Türkei', flag: '🇹🇷',
     currency: { code: 'TRY', name: 'Türkische Lira', symbol: '₺' },
     conversions: [
-      { label: 'Temperatur', from: '°C', to: '°F', example: '35°C = 95°F', slug: 'temperatur' },
-      { label: 'Kleidung', from: 'EU', to: 'TR', example: 'Gleiche Größen wie EU', slug: 'kleidergroessen' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb', slug: 'gewicht' },
-      { label: 'Kraftstoff', from: 'l/100km', to: 'km/l', example: '8 l/100km = 12,5 km/l', slug: 'kraftstoffverbrauch' },
+      { label: 'Währung', from: 'EUR', to: 'TRY', example: 'Wechselkurs siehe oben', slug: 'waehrung' },
     ],
   },
   {
@@ -65,24 +59,20 @@ const PRESETS: CountryPreset[] = [
     conversions: [
       { label: 'Kleidung', from: 'EU', to: 'Asiatisch', example: 'Oft 1–2 Größen größer', slug: 'kleidergroessen' },
       { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm', slug: 'schuhgroessen' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '32°C = 89,6°F', slug: 'temperatur' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb', slug: 'gewicht' },
     ],
   },
   {
     id: 'japan', name: 'Japan', flag: '🇯🇵',
     currency: { code: 'JPY', name: 'Japanischer Yen', symbol: '¥' },
     conversions: [
-      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm', slug: 'schuhgroessen' },
       { label: 'Kleidung', from: 'EU', to: 'JP', example: 'EU M ≈ JP L', slug: 'kleidergroessen' },
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '25°C = 77°F', slug: 'temperatur' },
+      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm', slug: 'schuhgroessen' },
     ],
   },
 ]
 
 export function CountryPresets() {
-  const [activePreset, setActivePreset] = useState('schweiz')
+  const [activePreset, setActivePreset] = useState('usa')
   const [rates, setRates] = useState<Record<string, number>>({})
   const [ratesLoading, setRatesLoading] = useState(true)
 
