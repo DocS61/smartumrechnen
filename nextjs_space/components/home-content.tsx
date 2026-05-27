@@ -164,6 +164,25 @@ export function HomeContent() {
       </section>
 
       <SiteFooter />
+
+      {/* JSON-LD WebSite Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'SmartUmrechnen',
+            url: 'https://smartumrechnen.de',
+            description: 'Kostenloser Online-Umrechner für 15 Einheiten: Länge, Gewicht, Temperatur, Währung und mehr.',
+            applicationCategory: 'UtilityApplication',
+            operatingSystem: 'All',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+            inLanguage: 'de',
+            author: { '@type': 'Person', name: 'Dr. Hartmut Sauer' },
+          }),
+        }}
+      />
     </main>
   )
 }

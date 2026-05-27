@@ -1,28 +1,11 @@
 import { categories } from '@/lib/converter-data'
+import { COMPOUND_NAMES } from '@/lib/constants'
 import { SiteHeader } from '@/components/site-header'
 import { ConverterPage } from './_components/converter-page'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-
-const COMPOUND_NAMES: Record<string, string> = {
-  laenge: 'Längen-Umrechner',
-  gewicht: 'Gewichts-Umrechner',
-  temperatur: 'Temperatur-Umrechner',
-  waehrung: 'Währungs-Umrechner',
-  flaeche: 'Flächen-Umrechner',
-  volumen: 'Volumen-Umrechner',
-  geschwindigkeit: 'Geschwindigkeits-Umrechner',
-  kleidergroessen: 'Kleidergrößen-Umrechner',
-  schuhgroessen: 'Schuhgrößen-Umrechner',
-  kochmasse: 'Kochmaß-Umrechner',
-  vitamine: 'Vitamin-Umrechner',
-  datengroessen: 'Datengrößen-Umrechner',
-  kraftstoffverbrauch: 'Kraftstoffverbrauchs-Umrechner',
-  druck: 'Druck-Umrechner',
-  leistung: 'Leistungs-Umrechner',
-}
 
 export async function generateStaticParams() {
   return (categories ?? []).map((c: any) => ({ slug: c?.slug ?? '' }))

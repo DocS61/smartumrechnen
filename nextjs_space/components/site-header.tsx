@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Calculator, Menu, X, History, Star, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
@@ -14,9 +14,9 @@ export function SiteHeader() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  if (!mounted && typeof window !== 'undefined') {
-    setTimeout(() => setMounted(true), 0)
-  }
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border">

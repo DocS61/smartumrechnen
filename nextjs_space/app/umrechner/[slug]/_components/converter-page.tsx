@@ -1,6 +1,7 @@
 'use client'
 
 import { getCategoryBySlug, categories, type ConverterCategory } from '@/lib/converter-data'
+import { COMPOUND_NAMES, RELATED_CATEGORIES } from '@/lib/constants'
 import { ConverterShell } from '@/components/converter-shell'
 import { ConversionChart } from '@/components/conversion-chart'
 import { AdBanner } from '@/components/ad-banner'
@@ -26,31 +27,16 @@ interface ConverterPageProps {
   slug: string
 }
 
-const COMPOUND_NAMES: Record<string, string> = {
-  laenge: 'Längen-Umrechner',
-  gewicht: 'Gewichts-Umrechner',
-  temperatur: 'Temperatur-Umrechner',
-  waehrung: 'Währungs-Umrechner',
-  flaeche: 'Flächen-Umrechner',
-  volumen: 'Volumen-Umrechner',
-  geschwindigkeit: 'Geschwindigkeits-Umrechner',
-  kleidergroessen: 'Kleidergrößen-Umrechner',
-  schuhgroessen: 'Schuhgrößen-Umrechner',
-  kochmasse: 'Kochmaß-Umrechner',
-  vitamine: 'Vitamin-Umrechner',
-  datengroessen: 'Datengrößen-Umrechner',
-  kraftstoffverbrauch: 'Kraftstoffverbrauchs-Umrechner',
-  druck: 'Druck-Umrechner',
-  leistung: 'Leistungs-Umrechner',
-}
-
 export function ConverterPage({ slug }: ConverterPageProps) {
   const cat = getCategoryBySlug(slug ?? '')
   if (!cat) return <div className="p-8 text-center">Kategorie nicht gefunden.</div>
 
   const Icon = cat?.icon
-  const relatedCats = (categories ?? [])
-    .filter((c: ConverterCategory) => c?.slug !== slug)
+  // Intelligente Auswahl verwandter Kategorien
+  const relatedSlugs = RELATED_CATEGORIES[slug] ?? []
+  const relatedCats = relatedSlugs
+    .map(s => (categories ?? []).find((c: ConverterCategory) => c?.slug === s))
+    .filter((c): c is ConverterCategory => !!c)
     .slice(0, 4)
 
   return (
