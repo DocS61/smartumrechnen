@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
 import { PWARegister } from '@/components/pwa-register'
+import { PWAInstallBanner } from '@/components/pwa-install-banner'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -53,6 +54,7 @@ export default function RootLayout({
           <Toaster />
           <ChunkLoadErrorHandler />
           <PWARegister />
+          <PWAInstallBanner />
         </ThemeProvider>
       </body>
     </html>
