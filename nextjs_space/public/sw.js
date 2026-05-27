@@ -1,0 +1,40 @@
+const CACHE_NAME = 'smartumrechnen-v1'
+const urlsToCache = [
+  '/',
+]
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+  )
+  self.skipWaiting()
+})
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      if (response) return response
+      return fetch(event.request).then((fetchResponse) => {
+        if (!fetchResponse || fetchResponse.status !== 200) return fetchResponse
+        const responseToCache = fetchResponse.clone()
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache)
+        })
+        return fetchResponse
+      }).catch(() => {
+        return caches.match('/') || new Response('Offline', { status: 503 })
+      })
+    })
+  )
+})
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.filter((name) => name !== CACHE_NAME).map((name) => caches.delete(name))
+      )
+    )
+  )
+})
