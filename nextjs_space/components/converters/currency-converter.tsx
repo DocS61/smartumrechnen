@@ -209,9 +209,12 @@ export function CurrencyConverter() {
                 <h4 className="text-sm font-medium mb-3 text-muted-foreground">Alle Kurse für 1 {fromCurrency}:</h4>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                   {CURRENCIES.filter((c: any) => c?.code !== fromCurrency).map((c: any) => (
-                    <div key={c?.code} className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/50 text-sm">
-                      <span className="text-muted-foreground">{c?.code}</span>
-                      <span className="font-mono">{formatNumber(convert(1, fromCurrency, c?.code ?? ''), 4)}</span>
+                    <div key={c?.code} className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/50 text-sm gap-2">
+                      <div className="flex flex-col min-w-0">
+                        <span className="font-medium text-foreground">{c?.symbol} {c?.code}</span>
+                        <span className="text-xs text-muted-foreground truncate">{c?.name}</span>
+                      </div>
+                      <span className="font-mono font-semibold whitespace-nowrap">{formatNumber(convert(1, fromCurrency, c?.code ?? ''), 4)}</span>
                     </div>
                   ))}
                 </div>

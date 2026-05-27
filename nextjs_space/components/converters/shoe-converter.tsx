@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Users, Footprints } from 'lucide-react'
+import { Users, Footprints, Baby } from 'lucide-react'
 import { FadeIn } from '@/components/ui/animate'
 
-type Gender = 'damen' | 'herren'
+type Category = 'damen' | 'herren' | 'kinder'
 
-const SHOE_SIZES: Record<Gender, { eu: string; us: string; uk: string; cm: string }[]> = {
+const SHOE_SIZES: Record<Category, { eu: string; us: string; uk: string; cm: string }[]> = {
   damen: [
     { eu: '35', us: '5', uk: '2.5', cm: '22.5' },
     { eu: '36', us: '5.5', uk: '3.5', cm: '23' },
@@ -30,37 +30,73 @@ const SHOE_SIZES: Record<Gender, { eu: string; us: string; uk: string; cm: strin
     { eu: '46', us: '12', uk: '11', cm: '30' },
     { eu: '47', us: '13', uk: '12', cm: '30.5' },
   ],
+  kinder: [
+    { eu: '18', us: '3C', uk: '2', cm: '11' },
+    { eu: '19', us: '4C', uk: '3', cm: '11.5' },
+    { eu: '20', us: '4.5C', uk: '3.5', cm: '12.5' },
+    { eu: '21', us: '5.5C', uk: '4.5', cm: '13' },
+    { eu: '22', us: '6C', uk: '5', cm: '13.5' },
+    { eu: '23', us: '7C', uk: '6', cm: '14' },
+    { eu: '24', us: '8C', uk: '7', cm: '14.5' },
+    { eu: '25', us: '8.5C', uk: '7.5', cm: '15.5' },
+    { eu: '26', us: '9.5C', uk: '8.5', cm: '16' },
+    { eu: '27', us: '10C', uk: '9', cm: '16.5' },
+    { eu: '28', us: '11C', uk: '10', cm: '17' },
+    { eu: '29', us: '11.5C', uk: '10.5', cm: '17.5' },
+    { eu: '30', us: '12.5C', uk: '11.5', cm: '18.5' },
+    { eu: '31', us: '13C', uk: '12', cm: '19' },
+    { eu: '32', us: '1Y', uk: '13', cm: '20' },
+    { eu: '33', us: '2Y', uk: '1', cm: '20.5' },
+    { eu: '34', us: '3Y', uk: '2', cm: '21' },
+    { eu: '35', us: '3.5Y', uk: '2.5', cm: '21.5' },
+  ],
+}
+
+const CATEGORY_CONFIG: Record<Category, { label: string; icon: typeof Users }> = {
+  damen: { label: 'Damen', icon: Users },
+  herren: { label: 'Herren', icon: Footprints },
+  kinder: { label: 'Kinder', icon: Baby },
 }
 
 export function ShoeConverter() {
-  const [gender, setGender] = useState<Gender>('damen')
+  const [category, setCategory] = useState<Category>('damen')
   const [selectedIdx, setSelectedIdx] = useState(3)
 
-  const sizes = SHOE_SIZES?.[gender] ?? []
+  const sizes = SHOE_SIZES?.[category] ?? []
   const selected = sizes?.[selectedIdx]
+
+  const handleCategoryChange = (cat: Category) => {
+    setCategory(cat)
+    setSelectedIdx(cat === 'kinder' ? 5 : 3)
+  }
 
   return (
     <FadeIn>
       <Card>
         <CardContent className="p-6">
           <div className="flex gap-2 mb-6">
-            <button
-              onClick={() => { setGender('damen'); setSelectedIdx(3) }}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${
-                gender === 'damen' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'
-              }`}
-            >
-              <Users className="w-4 h-4" /> Damen
-            </button>
-            <button
-              onClick={() => { setGender('herren'); setSelectedIdx(3) }}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${
-                gender === 'herren' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'
-              }`}
-            >
-              <Footprints className="w-4 h-4" /> Herren
-            </button>
+            {(Object.keys(CATEGORY_CONFIG) as Category[]).map((cat) => {
+              const config = CATEGORY_CONFIG[cat]
+              const Icon = config.icon
+              return (
+                <button
+                  key={cat}
+                  onClick={() => handleCategoryChange(cat)}
+                  className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${
+                    category === cat ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" /> {config.label}
+                </button>
+              )
+            })}
           </div>
+
+          {category === 'kinder' && (
+            <div className="mb-4 p-3 rounded-lg bg-blue-50 dark:bg-blue-950/30 text-sm text-blue-700 dark:text-blue-300">
+              <strong>Hinweis:</strong> Kindergrößen variieren je nach Hersteller. EU 18–31 entspricht Kleinkindern (ca. 0–6 Jahre), EU 32–35 entspricht Schulkindern (ca. 6–10 Jahre).
+            </div>
+          )}
 
           <div className="mb-6">
             <label className="text-sm font-medium text-muted-foreground mb-2 block">EU-Größe wählen</label>
