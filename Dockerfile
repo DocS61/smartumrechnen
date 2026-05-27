@@ -37,12 +37,11 @@ ENV HOSTNAME="0.0.0.0"
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Statische Assets kopieren
-COPY --from=builder /app/public ./public
-
 # Standalone-Output kopieren
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+# outputFileTracingRoot zeigt auf '../', daher liegt der Output unter .next/standalone/app/
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/app ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
 USER nextjs
 
