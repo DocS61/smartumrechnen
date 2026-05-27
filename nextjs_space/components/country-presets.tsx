@@ -18,6 +18,26 @@ interface CountryPreset {
 
 const PRESETS: CountryPreset[] = [
   {
+    id: 'schweiz', name: 'Schweiz', flag: '🇨🇭',
+    currency: { code: 'CHF', name: 'Schweizer Franken', symbol: 'CHF' },
+    conversions: [
+      { label: 'Kraftstoff', from: 'l/100km', to: 'CHF/km', example: 'Berechne Spritkosten' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb' },
+      { label: 'Fläche', from: 'm²', to: 'Ar', example: '100 m² = 1 Ar' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '0°C = 32°F' },
+    ],
+  },
+  {
+    id: 'uk', name: 'Großbritannien', flag: '🇬🇧',
+    currency: { code: 'GBP', name: 'Britisches Pfund', symbol: '£' },
+    conversions: [
+      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi' },
+      { label: 'Gewicht', from: 'kg', to: 'Stone', example: '80 kg = 12,6 st' },
+      { label: 'Volumen', from: 'Liter', to: 'UK-Gal.', example: '1 L = 0,22 gal' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F' },
+    ],
+  },
+  {
     id: 'usa', name: 'USA', flag: '🇺🇸',
     currency: { code: 'USD', name: 'US-Dollar', symbol: '$' },
     conversions: [
@@ -35,37 +55,17 @@ const PRESETS: CountryPreset[] = [
       { label: 'Temperatur', from: '°C', to: '°F', example: '35°C = 95°F' },
       { label: 'Kleidung', from: 'EU', to: 'TR', example: 'Gleiche Größen wie EU' },
       { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb' },
-      { label: 'Fläche', from: 'm²', to: 'Ar', example: '100 m² = 1 Ar' },
+      { label: 'Kraftstoff', from: 'l/100km', to: '₺/km', example: 'Berechne Spritkosten' },
     ],
   },
   {
     id: 'thailand', name: 'Thailand', flag: '🇹🇭',
     currency: { code: 'THB', name: 'Thailändischer Baht', symbol: '฿' },
     conversions: [
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '32°C = 89,6°F' },
       { label: 'Kleidung', from: 'EU', to: 'Asiatisch', example: 'Oft 1–2 Größen größer' },
       { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm' },
-    ],
-  },
-  {
-    id: 'uk', name: 'Großbritannien', flag: '🇬🇧',
-    currency: { code: 'GBP', name: 'Britisches Pfund', symbol: '£' },
-    conversions: [
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi' },
-      { label: 'Gewicht', from: 'kg', to: 'Stone', example: '80 kg = 12,6 st' },
-      { label: 'Volumen', from: 'Liter', to: 'UK-Gal.', example: '1 L = 0,22 gal' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F' },
-    ],
-  },
-  {
-    id: 'spanien', name: 'Spanien', flag: '🇪🇸',
-    currency: { code: 'EUR', name: 'Euro', symbol: '€' },
-    conversions: [
-      { label: 'Temperatur', from: '°C', to: '°F', example: '38°C = 100,4°F' },
-      { label: 'Kleidung', from: 'EU', to: 'ES', example: 'Gleiche Größen wie EU' },
-      { label: 'Kraftstoff', from: 'l/100km', to: '€/km', example: 'Berechne Spritkosten' },
-      { label: 'Fläche', from: 'm²', to: 'Hektar', example: '10.000 m² = 1 ha' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '32°C = 89,6°F' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb' },
     ],
   },
   {
@@ -81,7 +81,7 @@ const PRESETS: CountryPreset[] = [
 ]
 
 export function CountryPresets() {
-  const [activePreset, setActivePreset] = useState('usa')
+  const [activePreset, setActivePreset] = useState('schweiz')
   const [rates, setRates] = useState<Record<string, number>>({})
   const [ratesLoading, setRatesLoading] = useState(true)
 
@@ -163,7 +163,7 @@ export function CountryPresets() {
             </div>
             <p className="text-xs text-muted-foreground mt-1">
               {preset?.currency?.code === 'EUR'
-                ? 'Spanien nutzt den Euro – kein Geldwechsel nötig!'
+                ? 'Gleiches Währungsgebiet – kein Geldwechsel nötig!'
                 : `1 EUR = ${getExchangeRate(preset?.currency?.code ?? '')} ${preset?.currency?.name}`}
             </p>
           </div>
