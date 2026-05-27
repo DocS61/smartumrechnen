@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung – SmartUmrechnen',
   description: 'Datenschutzerklärung gemäß DSGVO für SmartUmrechnen.',
+  alternates: { canonical: '/datenschutz' },
 }
 
 export default function DatenschutzPage() {

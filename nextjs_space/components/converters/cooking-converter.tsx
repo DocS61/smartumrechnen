@@ -89,7 +89,7 @@ export function CookingConverter() {
 
             {/* All cooking units */}
             <div className="mt-6 pt-4 border-t border-border">
-              <h4 className="text-sm font-medium mb-3 text-muted-foreground flex items-center gap-2"><CookingPot className="w-4 h-4" /> Umrechnungskette</h4>
+              <h3 className="text-sm font-medium mb-3 text-muted-foreground flex items-center gap-2"><CookingPot className="w-4 h-4" /> Umrechnungskette</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {COOKING_UNITS.filter((u: CookingUnit) => u?.id !== fromUnit).map((u: CookingUnit) => (
                   <div key={u?.id} className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/50 text-sm">
@@ -106,7 +106,7 @@ export function CookingConverter() {
       <FadeIn delay={0.1}>
         <Card>
           <CardContent className="p-6">
-            <h4 className="text-sm font-semibold mb-4">Häufige Küchen-Umrechnungen</h4>
+            <h3 className="text-sm font-semibold mb-4">Häufige Küchen-Umrechnungen</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {COMMON_CONVERSIONS.map((c: any, i: number) => (
                 <div key={i} className="flex items-center justify-between px-4 py-3 rounded-lg bg-muted/50">

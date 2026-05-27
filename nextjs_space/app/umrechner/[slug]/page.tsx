@@ -35,9 +35,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${compoundName} – SmartUmrechnen`,
     description: `Kostenloser ${compoundName}: ${cat?.description ?? ''}. Schnell, präzise und offline verfügbar.`,
+    alternates: {
+      canonical: `/umrechner/${params?.slug}`,
+    },
     openGraph: {
       title: `${compoundName} – SmartUmrechnen`,
-      description: cat?.description ?? '',
+      description: `Kostenloser ${compoundName}: ${cat?.description ?? ''}. Schnell, präzise und offline verfügbar.`,
       type: 'website',
       locale: 'de_DE',
     },

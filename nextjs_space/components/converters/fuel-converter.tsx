@@ -32,9 +32,9 @@ export function FuelConverter() {
       <FadeIn>
         <Card>
           <CardContent className="p-6">
-            <h4 className="text-sm font-semibold mb-4 flex items-center gap-2">
+            <h3 className="text-sm font-semibold mb-4 flex items-center gap-2">
               <Fuel className="w-4 h-4" style={{ color: '#D946EF' }} /> Verbrauch umrechnen
-            </h4>
+            </h3>
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Verbrauch (l/100km)</label>
@@ -63,9 +63,9 @@ export function FuelConverter() {
       <FadeIn delay={0.1}>
         <Card>
           <CardContent className="p-6">
-            <h4 className="text-sm font-semibold mb-4 flex items-center gap-2">
+            <h3 className="text-sm font-semibold mb-4 flex items-center gap-2">
               <Euro className="w-4 h-4" style={{ color: '#D946EF' }} /> Kostenberechnung
-            </h4>
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <div className="space-y-2">
                 <label className="text-sm text-muted-foreground">Verbrauch (l/100km)</label>

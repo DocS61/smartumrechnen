@@ -214,7 +214,7 @@ export function CurrencyConverter() {
             {/* All rates chain */}
             {!loading && (
               <div className="mt-6 pt-4 border-t border-border">
-                <h4 className="text-sm font-medium mb-3 text-muted-foreground">Alle Kurse für 1 {fromCurrency}:</h4>
+                <h3 className="text-sm font-medium mb-3 text-muted-foreground">Alle Kurse für 1 {fromCurrency}:</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                   {CURRENCIES.filter((c: any) => c?.code !== fromCurrency).map((c: any) => (
                     <div key={c?.code} className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/50 text-sm gap-2">

@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Disclaimer – SmartUmrechnen',
   description: 'Haftungsausschluss für die Nutzung der Umrechnungsdienste von SmartUmrechnen.',
+  alternates: { canonical: '/disclaimer' },
 }
 
 export default function DisclaimerPage() {

@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Impressum – SmartUmrechnen',
   description: 'Impressum und Angaben gemäß § 5 DDG für SmartUmrechnen.',
+  alternates: { canonical: '/impressum' },
 }
 
 export default function ImpressumPage() {
