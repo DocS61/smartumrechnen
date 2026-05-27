@@ -41,3 +41,4 @@ coverage/
 .deploy/
 *.docx
 *.pdf
+node_modules
