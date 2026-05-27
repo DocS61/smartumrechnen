@@ -26,9 +26,19 @@ export function HomeContent() {
     setHasHistory((getHistory()?.length ?? 0) > 0)
   }, [])
 
-  const suggestedCategories = (suggestions ?? []).length > 0
-    ? categories?.filter((c: any) => (suggestions ?? []).includes(c?.slug))
-    : []
+  const DEFAULT_SUGGESTIONS = ['laenge', 'gewicht', 'temperatur', 'waehrung', 'flaeche']
+
+  const suggestedCategories = (() => {
+    const userSlugs = suggestions ?? []
+    // Ergänze mit Defaults, falls weniger als 5 Vorschläge
+    const combined = [...userSlugs]
+    for (const slug of DEFAULT_SUGGESTIONS) {
+      if (combined.length >= 5) break
+      if (!combined.includes(slug)) combined.push(slug)
+    }
+    return categories?.filter((c: any) => combined.includes(c?.slug))
+      .sort((a: any, b: any) => combined.indexOf(a?.slug) - combined.indexOf(b?.slug))
+  })()
 
   return (
     <main className="min-h-screen">
@@ -67,13 +77,13 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* Smart Suggestions */}
+      {/* Smart Suggestions – immer sichtbar mit Defaults */}
       {(suggestedCategories?.length ?? 0) > 0 && (
         <section className="max-w-[1200px] mx-auto px-4 py-8">
           <SlideIn from="left">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="w-5 h-5 text-primary" />
-              <h2 className="font-display font-semibold text-lg">Deine häufigsten Umrechner</h2>
+              <h2 className="font-display font-semibold text-lg">{(suggestions?.length ?? 0) > 0 ? 'Deine häufigsten Umrechner' : 'Beliebte Umrechner'}</h2>
             </div>
           </SlideIn>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
