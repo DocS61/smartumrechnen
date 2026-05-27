@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Plane, RefreshCw, TrendingUp } from 'lucide-react'
+import { Plane, RefreshCw, TrendingUp, ArrowRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { FadeIn } from '@/components/ui/animate'
 import { getCachedCurrencyRates } from '@/lib/local-storage'
@@ -13,7 +14,7 @@ interface CountryPreset {
   name: string
   flag: string
   currency: { code: string; name: string; symbol: string }
-  conversions: { label: string; from: string; to: string; example: string }[]
+  conversions: { label: string; from: string; to: string; example: string; slug: string }[]
 }
 
 const PRESETS: CountryPreset[] = [
@@ -21,61 +22,61 @@ const PRESETS: CountryPreset[] = [
     id: 'schweiz', name: 'Schweiz', flag: '🇨🇭',
     currency: { code: 'CHF', name: 'Schweizer Franken', symbol: 'CHF' },
     conversions: [
-      { label: 'Kraftstoff', from: 'l/100km', to: 'CHF/km', example: 'Berechne Spritkosten' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb' },
-      { label: 'Fläche', from: 'm²', to: 'Ar', example: '100 m² = 1 Ar' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '0°C = 32°F' },
+      { label: 'Kraftstoff', from: 'l/100km', to: 'km/l', example: '7 l/100km = 14,3 km/l', slug: 'kraftstoffverbrauch' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb', slug: 'gewicht' },
+      { label: 'Fläche', from: 'm²', to: 'Ar', example: '100 m² = 1 Ar', slug: 'flaeche' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '0°C = 32°F', slug: 'temperatur' },
     ],
   },
   {
     id: 'uk', name: 'Großbritannien', flag: '🇬🇧',
     currency: { code: 'GBP', name: 'Britisches Pfund', symbol: '£' },
     conversions: [
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi' },
-      { label: 'Gewicht', from: 'kg', to: 'Stone', example: '80 kg = 12,6 st' },
-      { label: 'Volumen', from: 'Liter', to: 'UK-Gal.', example: '1 L = 0,22 gal' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F' },
+      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
+      { label: 'Gewicht', from: 'kg', to: 'Stone', example: '80 kg = 12,6 st', slug: 'gewicht' },
+      { label: 'Volumen', from: 'Liter', to: 'UK-Gal.', example: '1 L = 0,22 gal', slug: 'volumen' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F', slug: 'temperatur' },
     ],
   },
   {
     id: 'usa', name: 'USA', flag: '🇺🇸',
     currency: { code: 'USD', name: 'US-Dollar', symbol: '$' },
     conversions: [
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb' },
-      { label: 'Volumen', from: 'Liter', to: 'Gallonen', example: '1 L = 0,264 gal' },
-      { label: 'Speed', from: 'km/h', to: 'mph', example: '100 km/h = 62,14 mph' },
+      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '20°C = 68°F', slug: 'temperatur' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb', slug: 'gewicht' },
+      { label: 'Volumen', from: 'Liter', to: 'Gallonen', example: '1 L = 0,264 gal', slug: 'volumen' },
+      { label: 'Geschwindigkeit', from: 'km/h', to: 'mph', example: '100 km/h = 62,14 mph', slug: 'geschwindigkeit' },
     ],
   },
   {
     id: 'tuerkei', name: 'Türkei', flag: '🇹🇷',
     currency: { code: 'TRY', name: 'Türkische Lira', symbol: '₺' },
     conversions: [
-      { label: 'Temperatur', from: '°C', to: '°F', example: '35°C = 95°F' },
-      { label: 'Kleidung', from: 'EU', to: 'TR', example: 'Gleiche Größen wie EU' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb' },
-      { label: 'Kraftstoff', from: 'l/100km', to: '₺/km', example: 'Berechne Spritkosten' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '35°C = 95°F', slug: 'temperatur' },
+      { label: 'Kleidung', from: 'EU', to: 'TR', example: 'Gleiche Größen wie EU', slug: 'kleidergroessen' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '1 kg = 2,205 lb', slug: 'gewicht' },
+      { label: 'Kraftstoff', from: 'l/100km', to: 'km/l', example: '8 l/100km = 12,5 km/l', slug: 'kraftstoffverbrauch' },
     ],
   },
   {
     id: 'thailand', name: 'Thailand', flag: '🇹🇭',
     currency: { code: 'THB', name: 'Thailändischer Baht', symbol: '฿' },
     conversions: [
-      { label: 'Kleidung', from: 'EU', to: 'Asiatisch', example: 'Oft 1–2 Größen größer' },
-      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '32°C = 89,6°F' },
-      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb' },
+      { label: 'Kleidung', from: 'EU', to: 'Asiatisch', example: 'Oft 1–2 Größen größer', slug: 'kleidergroessen' },
+      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm', slug: 'schuhgroessen' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '32°C = 89,6°F', slug: 'temperatur' },
+      { label: 'Gewicht', from: 'kg', to: 'Pfund', example: '80 kg = 176,37 lb', slug: 'gewicht' },
     ],
   },
   {
     id: 'japan', name: 'Japan', flag: '🇯🇵',
     currency: { code: 'JPY', name: 'Japanischer Yen', symbol: '¥' },
     conversions: [
-      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm' },
-      { label: 'Kleidung', from: 'EU', to: 'JP', example: 'EU M ≈ JP L' },
-      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi' },
-      { label: 'Temperatur', from: '°C', to: '°F', example: '25°C = 77°F' },
+      { label: 'Schuhe', from: 'EU', to: 'cm', example: 'EU 42 = 26,5 cm', slug: 'schuhgroessen' },
+      { label: 'Kleidung', from: 'EU', to: 'JP', example: 'EU M ≈ JP L', slug: 'kleidergroessen' },
+      { label: 'Länge', from: 'km', to: 'Meilen', example: '100 km = 62,14 mi', slug: 'laenge' },
+      { label: 'Temperatur', from: '°C', to: '°F', example: '25°C = 77°F', slug: 'temperatur' },
     ],
   },
 ]
@@ -170,13 +171,20 @@ export function CountryPresets() {
 
           <div className="space-y-2">
             {(preset?.conversions ?? []).map((c: any, i: number) => (
-              <div key={i} className="flex items-center justify-between px-4 py-3 rounded-lg bg-muted/50">
+              <Link
+                key={i}
+                href={`/umrechner/${c?.slug ?? ''}`}
+                className="flex items-center justify-between px-4 py-3 rounded-lg bg-muted/50 hover:bg-muted/80 transition-colors group cursor-pointer"
+              >
                 <div className="flex items-center gap-2">
                   <Badge variant="secondary" className="text-xs">{c?.label ?? ''}</Badge>
                   <span className="text-sm text-muted-foreground">{c?.from ?? ''} → {c?.to ?? ''}</span>
                 </div>
-                <span className="text-sm font-mono">{c?.example ?? ''}</span>
-              </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-mono">{c?.example ?? ''}</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </Link>
             ))}
           </div>
         </CardContent>
