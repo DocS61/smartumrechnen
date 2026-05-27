@@ -29,7 +29,28 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">2. Allgemeines zur Datenverarbeitung</h2>
+              <h2 className="font-semibold text-base mb-3">2. Einwilligungsverwaltung (Consent Management)</h2>
+              <p>
+                Diese Website nutzt die Consent-Management-Plattform <strong>Usercentrics</strong> (Usercentrics GmbH,
+                Sendlinger Straße 7, 80331 München), um Ihre Einwilligung zur Speicherung von Cookies und zur
+                Verarbeitung personenbezogener Daten einzuholen und zu verwalten. Beim Besuch der Website wird ein
+                sogenannter Consent-Banner angezeigt, über den Sie Ihre Einwilligungen erteilen oder verweigern können.
+              </p>
+              <p className="mt-3">
+                Usercentrics speichert Ihre Einwilligungsentscheidung in einem Cookie auf Ihrem Endgerät. Dieses Cookie
+                enthält keine personenbezogenen Daten, sondern lediglich die Information, welche Einwilligungen Sie
+                erteilt oder verweigert haben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO
+                (rechtliche Verpflichtung) in Verbindung mit Art. 7 Abs. 1 DSGVO (Nachweis der Einwilligung).
+              </p>
+              <p className="mt-3">
+                Sie können Ihre Einwilligungseinstellungen jederzeit über das Consent-Banner anpassen, das Sie über
+                den Link im Footer der Website erneut aufrufen können. Weitere Informationen finden Sie in der{' '}
+                <a href="https://usercentrics.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary underline">Datenschutzerklärung von Usercentrics</a>.
+              </p>
+            </section>
+
+            <section className="p-6 rounded-xl border border-border bg-card">
+              <h2 className="font-semibold text-base mb-3">3. Allgemeines zur Datenverarbeitung</h2>
               <p>
                 Diese Website verarbeitet personenbezogene Daten grundsätzlich nur, soweit dies zur Bereitstellung einer
                 funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung
@@ -40,12 +61,20 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">3. Hosting und Content Delivery</h2>
+              <h2 className="font-semibold text-base mb-3">4. Hosting und Content Delivery</h2>
               <p>
-                Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden,
-                werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen,
+                Diese Website wird bei der <strong>Hetzner Online GmbH</strong> (Industriestr. 25, 91710 Gunzenhausen,
+                Deutschland) gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf
+                den Servern von Hetzner in Deutschland gespeichert. Hierbei kann es sich v.a. um IP-Adressen,
                 Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe
                 und sonstige Daten, die über eine Website generiert werden, handeln.
+              </p>
+              <p className="mt-3">
+                Hetzner verarbeitet die Daten in unserem Auftrag und ist vertraglich verpflichtet, die Daten
+                ausschließlich nach unserer Weisung zu verarbeiten und ein angemessenes Schutzniveau zu gewährleisten.
+                Wir haben einen Auftragsverarbeitungsvertrag (AVV) mit Hetzner geschlossen. Weitere Informationen
+                finden Sie in der{' '}
+                <a href="https://www.hetzner.com/de/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary underline">Datenschutzerklärung von Hetzner</a>.
               </p>
               <p className="mt-3">
                 Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden
@@ -55,7 +84,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">4. Zugriffsdaten und Server-Logfiles</h2>
+              <h2 className="font-semibold text-base mb-3">5. Zugriffsdaten und Server-Logfiles</h2>
               <p>
                 Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien,
                 die Ihr Browser automatisch an uns übermittelt. Dies sind:
@@ -76,7 +105,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">5. Lokale Speicherung (LocalStorage)</h2>
+              <h2 className="font-semibold text-base mb-3">6. Lokale Speicherung (LocalStorage)</h2>
               <p>
                 Diese Website verwendet die sogenannte LocalStorage-Technologie Ihres Browsers. Dabei werden Daten
                 ausschließlich lokal auf Ihrem Gerät gespeichert und nicht an unsere Server übertragen. Diese Daten
@@ -96,7 +125,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">6. Externe APIs</h2>
+              <h2 className="font-semibold text-base mb-3">7. Externe APIs</h2>
               <p>
                 Für die Währungsumrechnung verwenden wir die Frankfurter API (api.frankfurter.app), einen öffentlich
                 zugänglichen Dienst der Europäischen Zentralbank. Beim Abruf von Wechselkursen wird Ihre IP-Adresse
@@ -110,7 +139,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">7. Google Fonts (lokal)</h2>
+              <h2 className="font-semibold text-base mb-3">8. Google Fonts (lokal)</h2>
               <p>
                 Diese Website nutzt Schriftarten ("Google Fonts"), die lokal eingebunden werden. Es findet keine
                 Verbindung zu Servern von Google statt. Es werden keine Daten an Google übertragen.
@@ -118,21 +147,23 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">8. Google AdSense</h2>
+              <h2 className="font-semibold text-base mb-3">9. Google AdSense</h2>
               <p>
                 Diese Website kann Werbeanzeigen über Google AdSense enthalten. Google AdSense verwendet Cookies und
                 Web Beacons, um relevante Werbung zu schalten. Google kann hierbei Informationen (einschließlich Ihrer
                 IP-Adresse) an Server in den USA übertragen und dort speichern.
               </p>
               <p className="mt-3">
-                Sie können die Verwendung von Cookies durch Google über die Seite
+                Google AdSense wird erst nach Ihrer ausdrücklichen Einwilligung über unseren Consent-Manager
+                (Usercentrics) aktiviert. Sie können Ihre Einwilligung jederzeit über das Consent-Banner widerrufen.
+                Darüber hinaus können Sie die Verwendung von Cookies durch Google über die Seite
                 zur <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-primary underline">Google-Datenschutzerklärung für Werbung</a> deaktivieren.
                 Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
               </p>
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">9. SSL-/TLS-Verschlüsselung</h2>
+              <h2 className="font-semibold text-base mb-3">10. SSL-/TLS-Verschlüsselung</h2>
               <p>
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine
                 SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile
@@ -141,7 +172,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">10. Ihre Rechte</h2>
+              <h2 className="font-semibold text-base mb-3">11. Ihre Rechte</h2>
               <p>Sie haben gemäß DSGVO folgende Rechte:</p>
               <ul className="list-disc ml-6 mt-2 space-y-1">
                 <li><strong>Auskunft</strong> (Art. 15 DSGVO) – Recht auf Auskunft über Ihre gespeicherten Daten</li>
@@ -157,7 +188,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">11. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+              <h2 className="font-semibold text-base mb-3">12. Beschwerderecht bei einer Aufsichtsbehörde</h2>
               <p>
                 Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das
                 Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung
@@ -166,7 +197,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">12. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+              <h2 className="font-semibold text-base mb-3">13. Aktualität und Änderung dieser Datenschutzerklärung</h2>
               <p>
                 Diese Datenschutzerklärung ist aktuell gültig (Stand: Mai 2026). Durch die Weiterentwicklung unserer
                 Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,
