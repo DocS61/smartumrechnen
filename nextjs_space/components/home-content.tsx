@@ -13,6 +13,8 @@ import { HistoryPanel } from '@/components/history-panel'
 import { CountryPresets } from '@/components/country-presets'
 import { AdBanner } from '@/components/ad-banner'
 import { SiteFooter } from '@/components/site-footer'
+import { PopularConversions, FAQSection } from '@/components/seo-content-section'
+import { popularConversions, homeFAQs } from '@/lib/seo-content'
 
 export function HomeContent() {
   const [suggestions, setSuggestions] = useState<string[]>([])
@@ -142,10 +144,16 @@ export function HomeContent() {
         </Stagger>
       </section>
 
+      {/* Häufige Umrechnungen */}
+      <PopularConversions conversions={popularConversions} />
+
       {/* Ad Banner - Bottom */}
       <div className="max-w-[1200px] mx-auto px-4 py-4">
         <AdBanner slot="home-bottom" />
       </div>
+
+      {/* FAQ */}
+      <FAQSection faqs={homeFAQs} title="Häufige Fragen zu SmartUmrechnen" />
 
       {/* Bottom: Presets + History */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">

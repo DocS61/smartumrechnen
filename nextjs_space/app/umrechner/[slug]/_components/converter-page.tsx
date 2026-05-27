@@ -12,6 +12,8 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useState, useCallback } from 'react'
 import { SiteFooter } from '@/components/site-footer'
+import { ExplanationSection, ReferenceTable, FAQSection } from '@/components/seo-content-section'
+import { seoContentMap } from '@/lib/seo-content'
 
 // Special converters
 import { CurrencyConverter } from '@/components/converters/currency-converter'
@@ -91,10 +93,23 @@ export function ConverterPage({ slug }: ConverterPageProps) {
         <CountryPresets />
       </section>
 
+      {/* SEO Content */}
+      {seoContentMap[slug] && (
+        <>
+          <ExplanationSection content={seoContentMap[slug]} />
+          <ReferenceTable content={seoContentMap[slug]} />
+        </>
+      )}
+
       {/* Ad - Bottom */}
       <div className="max-w-[1200px] mx-auto px-4 py-4">
         <AdBanner slot={`converter-${slug}-bottom`} />
       </div>
+
+      {/* FAQ */}
+      {seoContentMap[slug]?.faqs && (
+        <FAQSection faqs={seoContentMap[slug].faqs} />
+      )}
 
       {/* Related Converters */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">
