@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion'
 
-const viewportConfig = { once: true, margin: '0px' as `${number}px`, amount: 0.01 }
-
 export function FadeIn({
   children, delay = 0, duration = 0.4, className,
 }: {
@@ -12,8 +10,7 @@ export function FadeIn({
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={viewportConfig}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -30,8 +27,7 @@ export function ScaleIn({
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={viewportConfig}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -55,8 +51,7 @@ export function SlideIn({
   return (
     <motion.div
       initial={{ opacity: 0, ...slideDirections[from] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={viewportConfig}
+      animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 0.4, delay, ease: 'easeOut' }}
       className={className}
     >
@@ -72,10 +67,12 @@ export function Stagger({
 }) {
   return (
     <motion.div
-      variants={{ show: { transition: { staggerChildren: staggerDelay } } }}
+      variants={{
+        hidden: {},
+        show: { transition: { staggerChildren: staggerDelay } },
+      }}
       initial="hidden"
-      whileInView="show"
-      viewport={viewportConfig}
+      animate="show"
       className={className}
     >
       {children}
