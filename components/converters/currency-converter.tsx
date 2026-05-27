@@ -54,14 +54,14 @@ export function CurrencyConverter() {
   const fetchRates = useCallback(async () => {
     setLoading(true)
     try {
-      const res = await fetch('https://api.frankfurter.app/latest?from=EUR')
+      const res = await fetch('/api/rates')
       if (!res?.ok) throw new Error('API-Fehler')
       const data = await res?.json()
-      const newRates: Record<string, number> = { EUR: 1, ...(data?.rates ?? {}) }
+      const newRates: Record<string, number> = data?.rates ?? {}
       setRates(newRates)
       setCachedCurrencyRates(newRates)
-      setIsOnline(true)
-      setLastUpdate(new Date().toLocaleString('de-DE'))
+      setIsOnline(data?.live ?? false)
+      setLastUpdate(new Date().toLocaleString('de-DE') + (data?.live ? '' : ' (Fallback)'))
     } catch {
       const cached = getCachedCurrencyRates()
       if (cached?.rates) {

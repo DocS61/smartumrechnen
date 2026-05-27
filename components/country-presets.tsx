@@ -79,10 +79,10 @@ export function CountryPresets() {
   const fetchRates = useCallback(async () => {
     setRatesLoading(true)
     try {
-      const res = await fetch('https://api.frankfurter.app/latest?from=EUR')
+      const res = await fetch('/api/rates')
       if (!res?.ok) throw new Error('API-Fehler')
       const data = await res?.json()
-      setRates({ EUR: 1, ...(data?.rates ?? {}) })
+      setRates(data?.rates ?? {})
     } catch {
       const cached = getCachedCurrencyRates()
       if (cached?.rates) {
