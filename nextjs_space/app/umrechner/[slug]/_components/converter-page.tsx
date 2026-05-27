@@ -11,6 +11,7 @@ import { FadeIn, SlideIn, HoverLift } from '@/components/ui/animate'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useState, useCallback } from 'react'
+import { SiteFooter } from '@/components/site-footer'
 
 // Special converters
 import { CurrencyConverter } from '@/components/converters/currency-converter'
@@ -101,6 +102,8 @@ export function ConverterPage({ slug }: ConverterPageProps) {
           </div>
         </SlideIn>
       </section>
+
+      <SiteFooter />
 
       {/* JSON-LD Structured Data */}
       <script

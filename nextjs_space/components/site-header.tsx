@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { categories } from '@/lib/converter-data'
+import { SearchDialog } from '@/components/search-dialog'
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
@@ -45,6 +46,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <SearchDialog />
           {mounted && (
             <Button
               variant="ghost"

@@ -12,6 +12,7 @@ import { FadeIn, SlideIn, Stagger, StaggerItem, HoverLift } from '@/components/u
 import { HistoryPanel } from '@/components/history-panel'
 import { CountryPresets } from '@/components/country-presets'
 import { AdBanner } from '@/components/ad-banner'
+import { SiteFooter } from '@/components/site-footer'
 
 export function HomeContent() {
   const [suggestions, setSuggestions] = useState<string[]>([])
@@ -154,20 +155,7 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-muted/30">
-        <div className="max-w-[1200px] mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <Calculator className="w-5 h-5 text-primary" />
-              <span className="font-display font-bold">SmartUmrechnen</span>
-            </div>
-            <p className="text-sm text-muted-foreground text-center">
-              © 2026 SmartUmrechnen – Kostenlose Online-Umrechnung
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
