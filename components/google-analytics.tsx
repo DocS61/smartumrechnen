@@ -6,7 +6,7 @@ import { useEffect, Suspense } from 'react'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
-// Separate component for tracking page views (needs useSearchParams which requires Suspense)
+// SPA Page View Tracking
 function GAPageViewTracker() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -25,7 +25,12 @@ export function GoogleAnalytics() {
 
   return (
     <>
-      {/* Google Consent Mode: Default auf denied setzen BEVOR gtag.js lädt */}
+      {/*
+        Google Consent Mode v2: Default auf denied setzen.
+        Usercentrics (via eRecht24) übernimmt automatisch die
+        consent-update-Signale, wenn Google Analytics als
+        Service im eRecht24-Projektmanager hinzugefügt wurde.
+      */}
       <Script
         id="ga-consent-default"
         strategy="beforeInteractive"
@@ -51,7 +56,7 @@ export function GoogleAnalytics() {
         strategy="afterInteractive"
       />
 
-      {/* GA konfigurieren */}
+      {/* GA4 konfigurieren */}
       <Script
         id="ga-config"
         strategy="afterInteractive"
@@ -63,50 +68,6 @@ export function GoogleAnalytics() {
           gtag('config', '${GA_ID}', {
             anonymize_ip: true,
             send_page_view: true
-          });
-        `}
-      </Script>
-
-      {/* Usercentrics Consent-Änderungen abhören */}
-      <Script
-        id="uc-consent-listener"
-        strategy="afterInteractive"
-      >
-        {`
-          window.addEventListener('UC_UI_CMP_EVENT', function(e) {
-            if (e && e.detail && e.detail.type === 'ACCEPT_ALL') {
-              gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted'
-              });
-            } else if (e && e.detail && e.detail.type === 'DENY_ALL') {
-              gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied'
-              });
-            } else if (e && e.detail && e.detail.type === 'SAVE') {
-              // Granulare Einwilligung: UC prüft einzelne Services
-              if (typeof UC_UI !== 'undefined') {
-                var analyticsConsent = UC_UI.getServicesBaseInfo()
-                  .some(function(s) {
-                    return s.name && s.name.toLowerCase().indexOf('google analytics') !== -1 && s.consent && s.consent.status === true;
-                  });
-                var adConsent = UC_UI.getServicesBaseInfo()
-                  .some(function(s) {
-                    return s.name && s.name.toLowerCase().indexOf('adsense') !== -1 && s.consent && s.consent.status === true;
-                  });
-                gtag('consent', 'update', {
-                  'analytics_storage': analyticsConsent ? 'granted' : 'denied',
-                  'ad_storage': adConsent ? 'granted' : 'denied',
-                  'ad_user_data': adConsent ? 'granted' : 'denied',
-                  'ad_personalization': adConsent ? 'granted' : 'denied'
-                });
-              }
-            }
           });
         `}
       </Script>
