@@ -1,4 +1,5 @@
 import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
@@ -41,7 +42,13 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="alternate" hrefLang="de" href="https://smartumrechnen.de" />
-        <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="g-ZzrFmCqs5b_b" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+        <Script
+          id="usercentrics-cmp"
+          src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+          strategy="beforeInteractive"
+          data-eu-mode="true"
+          data-settings-id="g-ZzrFmCqs5b_b"
+        />
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
       </head>
       <body className={`${dmSans.variable} ${jakartaSans.variable} ${jetbrainsMono.variable} font-sans`}>
