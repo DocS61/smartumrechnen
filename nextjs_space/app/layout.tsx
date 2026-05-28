@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
 import { PWARegister } from '@/components/pwa-register'
 import { PWAInstallBanner } from '@/components/pwa-install-banner'
-import { GoogleAnalytics } from '@/components/google-analytics'
+import { GAPageViewTracker } from '@/components/google-analytics'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -43,6 +43,24 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="alternate" hrefLang="de" href="https://smartumrechnen.de" />
+        {/* Google Consent Mode v2: Defaults VOR allen anderen Scripts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function(){dataLayer.push(arguments);};
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'wait_for_update': 2000
+              });
+              gtag('set', 'ads_data_redaction', true);
+            `,
+          }}
+        />
+        {/* Usercentrics CMP (eRecht24) */}
         <Script
           id="usercentrics-cmp"
           src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
@@ -64,7 +82,7 @@ export default function RootLayout({
           <ChunkLoadErrorHandler />
           <PWARegister />
           <PWAInstallBanner />
-          <GoogleAnalytics />
+          <GAPageViewTracker />
         </ThemeProvider>
       </body>
     </html>

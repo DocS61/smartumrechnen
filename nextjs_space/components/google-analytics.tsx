@@ -1,13 +1,46 @@
 'use client'
 
-import Script from 'next/script'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { useEffect, Suspense } from 'react'
+import { useEffect, Suspense, useRef, useState } from 'react'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
-// SPA Page View Tracking
-function GAPageViewTracker() {
+// Inject gtag.js and configure GA4 via DOM manipulation
+function GAScriptLoader() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    if (!GA_ID || mounted) return
+    setMounted(true)
+
+    // Ensure dataLayer and gtag exist
+    window.dataLayer = window.dataLayer || []
+    if (!window.gtag) {
+      window.gtag = function (...args: any[]) {
+        window.dataLayer.push(args)
+      }
+    }
+
+    // Load gtag.js
+    const script = document.createElement('script')
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+    script.async = true
+    document.head.appendChild(script)
+
+    // Configure GA4
+    window.gtag('js', new Date())
+    window.gtag('config', GA_ID, {
+      anonymize_ip: true,
+      send_page_view: true,
+    })
+
+  }, [mounted])
+
+  return null
+}
+
+// SPA Page View Tracking – sendet page_view bei Route-Wechsel
+function PageViewTracker() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -20,62 +53,22 @@ function GAPageViewTracker() {
   return null
 }
 
-export function GoogleAnalytics() {
+export function GAPageViewTracker() {
   if (!GA_ID) return null
-
   return (
     <>
-      {/*
-        Google Consent Mode v2: Default auf denied setzen.
-        Usercentrics (via eRecht24) übernimmt automatisch die
-        consent-update-Signale, wenn Google Analytics als
-        Service im eRecht24-Projektmanager hinzugefügt wurde.
-      */}
-      <Script
-        id="ga-consent-default"
-        strategy="beforeInteractive"
-      >
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'wait_for_update': 2000
-          });
-          gtag('set', 'ads_data_redaction', true);
-        `}
-      </Script>
-
-      {/* gtag.js laden */}
-      <Script
-        id="ga-gtag"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-
-      {/* GA4 konfigurieren */}
-      <Script
-        id="ga-config"
-        strategy="afterInteractive"
-      >
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}', {
-            anonymize_ip: true,
-            send_page_view: true
-          });
-        `}
-      </Script>
-
-      {/* SPA Page View Tracking */}
+      <GAScriptLoader />
       <Suspense fallback={null}>
-        <GAPageViewTracker />
+        <PageViewTracker />
       </Suspense>
     </>
   )
+}
+
+// TypeScript declarations
+declare global {
+  interface Window {
+    dataLayer: any[]
+    gtag: (...args: any[]) => void
+  }
 }
