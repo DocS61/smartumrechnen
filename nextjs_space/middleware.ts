@@ -1,15 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  const host = request.headers.get('host') || ''
+  // Behind reverse proxies (Traefik/Coolify), the original host
+  // is in x-forwarded-host, not in the host header
+  const forwardedHost = request.headers.get('x-forwarded-host')
+  const host = forwardedHost || request.headers.get('host') || ''
 
   // Redirect www to non-www
   if (host.startsWith('www.')) {
     const nonWwwHost = host.replace(/^www\./, '')
-    const url = request.nextUrl.clone()
-    url.host = nonWwwHost
-    url.protocol = 'https'
-    return NextResponse.redirect(url, 308)
+    const proto = request.headers.get('x-forwarded-proto') || 'https'
+    const path = request.nextUrl.pathname + request.nextUrl.search
+    return NextResponse.redirect(`${proto}://${nonWwwHost}${path}`, 308)
   }
 
   return NextResponse.next()
