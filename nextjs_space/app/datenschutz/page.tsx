@@ -164,44 +164,16 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">10. Google Analytics</h2>
-              <p>
-                Diese Website nutzt Google Analytics 4 (GA4), einen Webanalysedienst der Google Ireland Limited
-                („Google“), Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics verwendet Cookies
-                und ähnliche Technologien, die eine Analyse der Benutzung der Website durch Sie ermöglichen.
-              </p>
-              <p className="mt-3">
-                Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel
-                an einen Server von Google in den USA übertragen und dort gespeichert. Google ist unter dem
-                EU-US Data Privacy Framework zertifiziert, das ein angemessenes Datenschutzniveau gewährleistet.
-                Auf dieser Website ist die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb
-                der EU bzw. des EWR vor der Übertragung in die USA gekürzt wird.
-              </p>
-              <p className="mt-3">
-                Google Analytics wird erst nach Ihrer ausdrücklichen Einwilligung über unseren Consent-Manager
-                (Usercentrics) aktiviert. Sie können Ihre Einwilligung jederzeit über das Consent-Banner widerrufen.
-                Darüber hinaus können Sie die Erfassung durch Google Analytics verhindern, indem Sie das
-                Browser-Add-on zur Deaktivierung von Google Analytics herunterladen und installieren:{' '}
-                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-primary underline">Google Analytics Opt-out</a>.
-              </p>
-              <p className="mt-3">
-                Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Weitere Informationen zum
-                Umgang mit Nutzerdaten finden Sie in der{' '}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary underline">Datenschutzerklärung von Google</a>.
-              </p>
-            </section>
-
-            <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">11. SSL-/TLS-Verschlüsselung</h2>
+              <h2 className="font-semibold text-base mb-3">10. SSL-/TLS-Verschlüsselung</h2>
               <p>
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine
                 SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile
-                des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                des Browsers von &quot;http://&quot; auf &quot;https://&quot; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
               </p>
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">12. Ihre Rechte</h2>
+              <h2 className="font-semibold text-base mb-3">11. Ihre Rechte</h2>
               <p>Sie haben gemäß DSGVO folgende Rechte:</p>
               <ul className="list-disc ml-6 mt-2 space-y-1">
                 <li><strong>Auskunft</strong> (Art. 15 DSGVO) – Recht auf Auskunft über Ihre gespeicherten Daten</li>
@@ -217,7 +189,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">13. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+              <h2 className="font-semibold text-base mb-3">12. Beschwerderecht bei einer Aufsichtsbehörde</h2>
               <p>
                 Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das
                 Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung
@@ -226,7 +198,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">14. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+              <h2 className="font-semibold text-base mb-3">13. Aktualität und Änderung dieser Datenschutzerklärung</h2>
               <p>
                 Diese Datenschutzerklärung ist aktuell gültig (Stand: Mai 2026). Durch die Weiterentwicklung unserer
                 Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,

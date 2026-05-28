@@ -6,7 +6,6 @@ import { Toaster } from '@/components/ui/sonner'
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
 import { PWARegister } from '@/components/pwa-register'
 import { PWAInstallBanner } from '@/components/pwa-install-banner'
-import { GAPageViewTracker } from '@/components/google-analytics'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -43,14 +42,13 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="alternate" hrefLang="de" href="https://smartumrechnen.de" />
-        {/* Google Consent Mode v2: Defaults VOR allen anderen Scripts */}
+        {/* Google Consent Mode v2: Defaults für AdSense (kein Analytics) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               window.gtag = function(){dataLayer.push(arguments);};
               gtag('consent', 'default', {
-                'analytics_storage': 'denied',
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
@@ -82,7 +80,6 @@ export default function RootLayout({
           <ChunkLoadErrorHandler />
           <PWARegister />
           <PWAInstallBanner />
-          <GAPageViewTracker />
         </ThemeProvider>
       </body>
     </html>
