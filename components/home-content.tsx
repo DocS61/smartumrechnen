@@ -54,10 +54,24 @@ export function HomeContent() {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
                 Intelligente <span className="text-primary">Einheiten</span>-Umrechnung
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Schnell, präzise und kostenlos. Von Länge über Währung bis Vitamine –
                 alles an einem Ort mit Smart-Vorschlägen und Offline-Modus.
               </p>
+              <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  100 % kostenlos
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Ohne Anmeldung
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Offline verfügbar
+                </span>
+              </div>
               <div className="flex justify-center gap-3">
                 <Link href="#alle">
                   <Button size="lg" className="gap-2">
