@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { ChunkLoadErrorHandler } from '@/components/chunk-load-error-handler'
 import { PWARegister } from '@/components/pwa-register'
 import { PWAInstallBanner } from '@/components/pwa-install-banner'
+import { GoogleAnalytics } from '@/components/google-analytics'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
@@ -63,6 +64,7 @@ export default function RootLayout({
           <ChunkLoadErrorHandler />
           <PWARegister />
           <PWAInstallBanner />
+          <GoogleAnalytics />
         </ThemeProvider>
       </body>
     </html>
