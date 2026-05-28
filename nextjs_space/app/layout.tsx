@@ -41,6 +41,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="alternate" hrefLang="de" href="https://smartumrechnen.de" />
+        <script id="usercentrics-cmp" async data-eu-mode="true" data-settings-id="g-ZzrFmCqs5b_b" src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
       </head>
       <body className={`${dmSans.variable} ${jakartaSans.variable} ${jetbrainsMono.variable} font-sans`}>
