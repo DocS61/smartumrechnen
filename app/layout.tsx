@@ -66,13 +66,8 @@ export default function RootLayout({
           data-eu-mode="true"
           data-settings-id="g-ZzrFmCqs5b_b"
         />
-        {/* Google AdSense – beforeInteractive = im Server-HTML sichtbar für Googles Crawler */}
-        <Script
-          id="google-adsense"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4845255321653497"
-          strategy="beforeInteractive"
-          crossOrigin="anonymous"
-        />
+        {/* Google AdSense – Meta-Tag zur Website-Verifizierung */}
+        <meta name="google-adsense-account" content="ca-pub-4845255321653497" />
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
       </head>
       <body className={`${dmSans.variable} ${jakartaSans.variable} ${jetbrainsMono.variable} font-sans`}>
