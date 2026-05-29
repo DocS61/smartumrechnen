@@ -66,11 +66,11 @@ export default function RootLayout({
           data-eu-mode="true"
           data-settings-id="g-ZzrFmCqs5b_b"
         />
-        {/* Google AdSense */}
+        {/* Google AdSense – beforeInteractive = im Server-HTML sichtbar für Googles Crawler */}
         <Script
           id="google-adsense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4845255321653497"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           crossOrigin="anonymous"
         />
         <script src="https://apps.abacus.ai/chatllm/appllm-lib.js"></script>
