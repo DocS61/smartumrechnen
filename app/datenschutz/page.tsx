@@ -189,7 +189,25 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">12. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+              <h2 className="font-semibold text-base mb-3">12. Kontaktformular</h2>
+              <p>
+                Wenn Sie uns über das Kontaktformular auf unserer Website kontaktieren, werden die von Ihnen angegebenen
+                Daten (Name, E-Mail-Adresse, Betreff und Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von
+                Anschlussfragen bei uns gespeichert und per E-Mail an uns weitergeleitet.
+              </p>
+              <p className="mt-3">
+                <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung
+                von Anfragen) bzw. Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen).
+              </p>
+              <p className="mt-3">
+                Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich
+                sind. Für personenbezogene Daten aus der Eingabemaske des Kontaktformulars ist dies dann der Fall, wenn
+                die jeweilige Konversation beendet ist.
+              </p>
+            </section>
+
+            <section className="p-6 rounded-xl border border-border bg-card">
+              <h2 className="font-semibold text-base mb-3">13. Beschwerderecht bei einer Aufsichtsbehörde</h2>
               <p>
                 Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das
                 Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung
@@ -198,7 +216,7 @@ export default function DatenschutzPage() {
             </section>
 
             <section className="p-6 rounded-xl border border-border bg-card">
-              <h2 className="font-semibold text-base mb-3">13. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+              <h2 className="font-semibold text-base mb-3">14. Aktualität und Änderung dieser Datenschutzerklärung</h2>
               <p>
                 Diese Datenschutzerklärung ist aktuell gültig (Stand: Mai 2026). Durch die Weiterentwicklung unserer
                 Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,

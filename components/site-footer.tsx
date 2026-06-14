@@ -20,10 +20,11 @@ export function SiteFooter() {
             <span className="font-display font-bold group-hover:text-primary transition-colors">SmartUmrechnen</span>
           </Link>
           <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-            <Link href="/#alle" className="hover:text-foreground transition-colors">Alle Umrechner</Link>
+            <Link href="/about" className="hover:text-foreground transition-colors">Über uns</Link>
+            <Link href="/kontakt" className="hover:text-foreground transition-colors">Kontakt</Link>
+            <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>
             <Link href="/impressum" className="hover:text-foreground transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-foreground transition-colors">Datenschutz</Link>
-            <Link href="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
           </nav>
           <p className="text-sm text-muted-foreground text-center">
             © {year} SmartUmrechnen
