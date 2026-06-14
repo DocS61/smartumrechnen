@@ -1,44 +1,7 @@
-# Dependencies
 node_modules
-.pnp
-.pnp.js
-
-# Build outputs
 .next
 .build
-out
-dist
-build
-
-# Testing
-coverage
-
-# Environment (wird über Coolify gesetzt)
-.env
-.env.local
-.env.development
-.env.production
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Git
+yarn.lock
 .git
-.gitignore
-
-# Misc
+.DS_Store
 *.log
-*.md
-!README.md
-LICENSE
-Dockerfile
-docker-compose.yml
-.dockerignore
-tsconfig.tsbuildinfo
