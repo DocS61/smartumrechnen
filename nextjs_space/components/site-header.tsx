@@ -43,6 +43,15 @@ export function SiteHeader() {
               Alle 15 →
             </Button>
           </Link>
+          <Link href="/about">
+            <Button variant="ghost" size="sm" className="text-sm">Über uns</Button>
+          </Link>
+          <Link href="/kontakt">
+            <Button variant="ghost" size="sm" className="text-sm">Kontakt</Button>
+          </Link>
+          <Link href="/blog">
+            <Button variant="ghost" size="sm" className="text-sm">Blog</Button>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -85,6 +94,17 @@ export function SiteHeader() {
                       </Link>
                     )
                   })}
+                  <div className="mt-4 pt-4 border-t border-border">
+                    <Link href="/about" onClick={() => setOpen(false)} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                      <span className="text-sm font-medium">Über uns</span>
+                    </Link>
+                    <Link href="/kontakt" onClick={() => setOpen(false)} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                      <span className="text-sm font-medium">Kontakt</span>
+                    </Link>
+                    <Link href="/blog" onClick={() => setOpen(false)} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted transition-colors">
+                      <span className="text-sm font-medium">Blog</span>
+                    </Link>
+                  </div>
                 </nav>
               </div>
             </SheetContent>
