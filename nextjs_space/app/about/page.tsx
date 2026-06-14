@@ -76,10 +76,10 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed text-foreground/90">
               <p>
-                SmartUmrechnen wird von <strong>Dr. Hartmut Sauer</strong> betrieben – einem promovierten Naturwissenschaftler mit langjähriger Erfahrung in der Analyse und Aufbereitung technischer Daten. Die Verbindung aus wissenschaftlichem Hintergrund und dem Anspruch, komplexe Sachverhalte verständlich darzustellen, spiegelt sich in jedem Aspekt des Projekts wider.
+                SmartUmrechnen ist ein unabhängiges Projekt aus Deutschland. Unser Anspruch ist es, komplexe Umrechnungen verständlich und zugänglich zu machen – mit sorgfältig recherchierten Daten und einer benutzerfreundlichen Oberfläche.
               </p>
               <p>
-                Das Projekt ist als unabhängige Informationsplattform konzipiert und wird kontinuierlich weiterentwickelt. Neue Umrechner, zusätzliche Hintergrundartikel und technische Verbesserungen werden regelmäßig veröffentlicht.
+                Das Projekt wird als unabhängige Informationsplattform betrieben und kontinuierlich weiterentwickelt. Neue Umrechner, zusätzliche Hintergrundartikel und technische Verbesserungen werden regelmäßig veröffentlicht.
               </p>
             </div>
           </section>
