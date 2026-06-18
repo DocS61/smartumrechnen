@@ -957,6 +957,763 @@ In verschiedenen Branchen haben sich Spezialeinheiten etabliert:
 
 Gewichtsumrechnungen gehören zu den häufigsten Alltagskonversionen – ob beim Kochen mit internationalen Rezepten, beim Online-Shopping oder bei der Reise in angloamerikanische Länder. Der SmartUmrechnen Gewichts-Umrechner macht die Umrechnung in Sekundenschnelle.`,
   },
+  {
+    slug: 'flaeche-richtig-umrechnen',
+    title: 'Flächen richtig umrechnen: Von Quadratmeter bis Hektar',
+    description: 'Alles über Flächenmaße: Warum ein Ar 100 m² hat, wie groß ein Hektar wirklich ist und praktische Tipps für Immobilien, Landwirtschaft und Alltag.',
+    date: '2026-06-01',
+    readingTime: '10 Min.',
+    category: 'Fläche',
+    content: `## Warum Flächenmaße verwirrend sein können
+
+Fläche ist eine zweidimensionale Größe – und genau das macht die Umrechnung komplizierter als bei Längenmaßen. Wenn man einen Meter in Zentimeter umrechnet, multipliziert man mit 100. Bei Quadratmetern in Quadratzentimeter multipliziert man jedoch mit 10.000 (100 × 100). Dieser quadratische Faktor führt häufig zu Fehlern.
+
+Ein konkretes Beispiel: Ein Zimmer von 4 m × 5 m hat 20 Quadratmeter. In Quadratzentimetern wären das 200.000 cm² – eine Zahl, die zunächst überraschend groß wirkt. Doch sie ist mathematisch korrekt: 400 cm × 500 cm = 200.000 cm².
+
+## Die wichtigsten Flächenmaße im Überblick
+
+### Metrische Flächenmaße
+
+Das metrische System bietet eine logisch aufgebaute Hierarchie:
+
+- **Quadratmillimeter (mm²):** Die kleinste gebräuchliche Flächeneinheit. Verwendet in der Technik, z. B. für Querschnitte von Kabeln (ein Standardkabel hat oft 1,5 mm² oder 2,5 mm² Querschnitt).
+- **Quadratzentimeter (cm²):** Häufig bei Papierformaten und kleineren Flächen. Ein DIN-A4-Blatt hat etwa 623,7 cm².
+- **Quadratmeter (m²):** Die Standardeinheit für Wohnflächen, Grundrisse und mittlere Flächen. Eine durchschnittliche deutsche Wohnung hat rund 92 m².
+- **Ar (a):** 1 Ar = 100 m². Historisch entstanden als praktisches Maß für kleine Grundstücke. In Deutschland noch auf Grundbuchauszügen zu finden.
+- **Hektar (ha):** 1 Hektar = 10.000 m² = 100 Ar. Das Standardmaß in der Landwirtschaft. Ein Fußballfeld ist ungefähr 0,7 Hektar groß.
+- **Quadratkilometer (km²):** Für große Flächen wie Städte oder Länder. Berlin hat eine Fläche von etwa 891 km².
+
+### Imperiale Flächenmaße
+
+- **Quadratzoll (sq in):** 1 sq in = 6,4516 cm². Verwendet für Bildschirmgrößen (die Diagonale wird in Zoll gemessen, die Fläche in Quadratzoll berechnet).
+- **Quadratfuß (sq ft):** 1 sq ft = 0,0929 m². In den USA das Standardmaß für Wohnflächen. Eine durchschnittliche US-Wohnung hat rund 1.500 sq ft (ca. 139 m²).
+- **Quadratyard (sq yd):** 1 sq yd = 0,8361 m². Gelegentlich noch für Teppiche und Stoffe verwendet.
+- **Acre:** 1 Acre = 4.046,86 m² = 0,4047 Hektar. Historisch die Fläche, die ein Ochsengespann an einem Tag pflügen konnte. Heute das Standardmaß für Grundstücke in den USA und Großbritannien.
+- **Quadratmeile (sq mi):** 1 sq mi = 2,59 km². Für Landes- und Stadtflächen im angelsächsischen Raum.
+
+## Historische Hintergründe
+
+Das Wort „Morgen" als Flächenmaß bezeichnete die Fläche, die ein Bauer mit einem Ochsen an einem Vormittag pflügen konnte – typischerweise zwischen 2.500 und 3.600 m², je nach Region. In Norddeutschland entsprach ein Morgen oft etwa 2.553 m², in Süddeutschland eher 3.407 m². Diese regionalen Unterschiede zeigen, warum die Standardisierung so wichtig war.
+
+Der Acre hat eine ähnlich landwirtschaftliche Herkunft: Er bezeichnete die Fläche, die ein Joch Ochsen an einem Tag pflügen konnte. Die genaue Größe wurde später auf 4.046,86 m² festgelegt – eine krumme Zahl, die auf den historischen Ursprung zurückgeht.
+
+## Praktische Umrechnungstipps
+
+### Für Immobilien
+
+Wenn du eine Wohnung im Ausland suchst, ist die Umrechnung von Quadratfuß in Quadratmeter besonders wichtig. Eine Faustregel: Teile die Quadratfuß-Angabe durch 10 und nimm davon etwa 93 %. Oder einfacher: Quadratfuß × 0,093 = Quadratmeter. Eine 1.000-sq-ft-Wohnung hat also etwa 93 m².
+
+### Für die Landwirtschaft
+
+In der deutschen Landwirtschaft wird fast ausschließlich in Hektar gerechnet. Ein Hektar ist ein Quadrat mit 100 m Seitenlänge. Ein durchschnittlicher deutscher Bauernhof bewirtschaftet etwa 63 Hektar.
+
+### Für den Garten
+
+Typische Grundstücksgrößen in deutschen Neubaugebieten liegen zwischen 300 und 700 m². Ein Schrebergarten hat laut Bundeskleingartengesetz maximal 400 m² (einschließlich Laube).
+
+## Häufige Fehlerquellen
+
+Der häufigste Fehler bei der Flächenumrechnung ist das einfache Multiplizieren mit dem Längenfaktor statt mit dessen Quadrat. Merke dir:
+
+- 1 m = 100 cm → 1 m² = 10.000 cm² (nicht 100!)
+- 1 km = 1.000 m → 1 km² = 1.000.000 m² (nicht 1.000!)
+- 1 ft = 0,3048 m → 1 sq ft = 0,0929 m² (0,3048²)
+
+Ein weiterer häufiger Fehler: Die Verwechslung von Hektar und Quadrathektometer. Tatsächlich sind sie identisch (1 ha = 1 hm²), aber die Bezeichnung „Hektar" ist im Alltag gebräuchlicher.
+
+## Fazit
+
+Flächenmaße richtig umzurechnen erfordert ein Verständnis des quadratischen Zusammenhangs. Ob für Immobiliensuche, Gartenplanung oder internationale Projekte – mit den richtigen Umrechnungsfaktoren und einem Bewusstsein für die häufigsten Fehlerquellen gelingt die Umrechnung zuverlässig.`
+  },
+  {
+    slug: 'volumen-im-alltag',
+    title: 'Volumeneinheiten im Alltag: Liter, Gallone, Barrel und mehr',
+    description: 'Von der Milchtüte bis zum Öltanker: Wie Volumeneinheiten entstanden, wo sie verwendet werden und wie du sie korrekt umrechnest.',
+    date: '2026-06-03',
+    readingTime: '11 Min.',
+    category: 'Volumen',
+    content: `## Volumen: Mehr als nur Liter
+
+Volumen begegnet uns täglich – beim Kochen, Tanken, in der Medizin und in der Industrie. Doch die Vielfalt der Volumeneinheiten kann verwirrend sein: Liter, Milliliter, Kubikzentimeter, Gallone, Pint, Barrel, Bushel – jede Einheit hat ihren eigenen Kontext und ihre eigene Geschichte.
+
+## Die metrischen Volumeneinheiten
+
+### Liter und seine Untereinheiten
+
+Der Liter wurde 1795 in Frankreich als „Cadil" eingeführt und als das Volumen von einem Kubikdezimeter (1 dm³) definiert. Das bedeutet: Ein Würfel mit 10 cm Seitenlänge fasst genau einen Liter. Diese elegante Definition macht die Umrechnung zwischen Volumen- und Längenmaßen besonders einfach.
+
+**Die metrische Hierarchie:**
+- 1 Milliliter (ml) = 1 cm³ = 0,001 L
+- 1 Zentiliter (cl) = 10 ml = 0,01 L
+- 1 Deziliter (dl) = 100 ml = 0,1 L
+- 1 Liter (L) = 1.000 ml = 1 dm³
+- 1 Hektoliter (hl) = 100 L
+- 1 Kubikmeter (m³) = 1.000 L
+
+Ein Tropfen Wasser hat etwa 0,05 ml. Eine Badewanne fasst rund 150–180 Liter. Ein olympisches Schwimmbecken enthält 2.500 m³ oder 2,5 Millionen Liter Wasser.
+
+### Kubikzentimeter in der Medizin
+
+In der Medizin wird häufig der Kubikzentimeter (cm³ oder cc) verwendet. Ein Kubikzentimeter ist exakt ein Milliliter. Die Abkürzung „cc" stammt vom lateinischen „cubic centimeter" und ist besonders in der englischsprachigen Medizin verbreitet. Wenn ein Arzt „10 cc" sagt, meint er 10 ml.
+
+## Angloamerikanische Volumeneinheiten
+
+### US-amerikanische vs. britische Maße
+
+Hier wird es besonders verwirrend: Die USA und Großbritannien verwenden zwar teilweise die gleichen Bezeichnungen, aber mit unterschiedlichen Volumina!
+
+**Fluid Ounce (fl oz):**
+- US: 1 fl oz = 29,5735 ml
+- UK (Imperial): 1 fl oz = 28,4131 ml
+
+**Pint:**
+- US: 1 Pint = 473,2 ml (16 US fl oz)
+- UK: 1 Pint = 568,3 ml (20 Imperial fl oz)
+
+**Gallon:**
+- US: 1 Gallon = 3,785 L (128 US fl oz)
+- UK: 1 Gallon = 4,546 L (160 Imperial fl oz)
+
+Der Unterschied ist erheblich: Eine britische Gallone ist fast 20 % größer als eine US-Gallone! Das hat praktische Konsequenzen: Wenn ein amerikanisches Auto 30 miles per gallon verbraucht und ein britisches Auto ebenfalls 30 mpg angibt, verbraucht das britische Auto tatsächlich weniger Kraftstoff pro Strecke, weil die britische Gallone größer ist.
+
+### Das Barrel
+
+Das Barrel (Fass) ist die Standardeinheit im internationalen Ölhandel. Ein Barrel entspricht 42 US-Gallonen oder 158,987 Liter. Diese Einheit geht auf die Ölindustrie des 19. Jahrhunderts zurück, als Rohöl tatsächlich in Holzfässern transportiert wurde. Die Standardisierung auf 42 Gallonen erfolgte 1866 in Pennsylvania.
+
+Zum Vergleich: Deutschland verbraucht pro Tag etwa 2,1 Millionen Barrel Öl, das sind rund 334 Millionen Liter – genug, um etwa 134 olympische Schwimmbecken zu füllen.
+
+## Volumeneinheiten beim Kochen
+
+In der Küche prallen metrisches und imperiales System besonders deutlich aufeinander. Amerikanische Rezepte verwenden Cups, Tablespoons und Teaspoons, europäische Rezepte arbeiten mit Gramm und Millilitern.
+
+**Die wichtigsten Küchenmaße:**
+- 1 Teaspoon (tsp) = 5 ml
+- 1 Tablespoon (tbsp) = 15 ml = 3 tsp
+- 1 Cup = 236,6 ml (US) = 16 tbsp
+- 1 Pint = 2 Cups
+- 1 Quart = 2 Pints = 4 Cups
+
+**Wichtiger Hinweis:** Die Cup-Angabe bezieht sich auf das Volumen, nicht auf das Gewicht. Das bedeutet: 1 Cup Mehl (ca. 125 g) wiegt deutlich weniger als 1 Cup Zucker (ca. 200 g) oder 1 Cup Honig (ca. 340 g). Deshalb sind Gewichtsangaben in Rezepten grundsätzlich präziser.
+
+## Historische Kuriositäten
+
+Das „Schoppen" war im deutschsprachigen Raum bis ins 20. Jahrhundert ein gängiges Flüssigkeitsmaß, variierte aber stark nach Region: In Bayern entsprach ein Schoppen 0,5 Liter, in der Pfalz 0,4 Liter und in der Schweiz wird das Wort „Schoppen" heute noch für eine Babyflasche verwendet.
+
+In England bezeichnete ein „Gill" 5 Imperial Fluid Ounces (142 ml) – das Standardmaß für Spirituosen in britischen Pubs. Heute wird dort meist in Einheiten von 25 ml oder 35 ml ausgeschenkt.
+
+## Tipps für die richtige Umrechnung
+
+1. **Immer prüfen:** Handelt es sich um US- oder Imperial-Einheiten? Bei Gallonen und Pints macht das einen großen Unterschied.
+2. **Beim Kochen:** Volumen und Gewicht nicht verwechseln. „1 Cup Butter" ist etwas anderes als „1 Cup Mehl".
+3. **In der Wissenschaft:** Hier wird fast ausschließlich mit Litern und Millilitern gearbeitet. Kubikzentimeter (cm³) und Milliliter sind identisch.
+4. **Bei Kraftstoff:** Angaben in Litern pro 100 km (Europa) und Miles per Gallon (USA/UK) lassen sich nicht einfach „umdrehen" – die Formel ist: 235,215 / (L/100km) = mpg (US).
+
+## Fazit
+
+Volumeneinheiten spiegeln die kulturelle und historische Vielfalt der Menschheit wider. Vom Kubikzentimeter in der Medizin über den Liter im Alltag bis zum Barrel im Welthandel – jede Einheit hat ihren spezifischen Anwendungsbereich. Das Verständnis dieser Zusammenhänge hilft nicht nur bei der korrekten Umrechnung, sondern gibt auch einen faszinierenden Einblick in die Geschichte des Messens.`
+  },
+  {
+    slug: 'geschwindigkeit-kmh-mph-knoten',
+    title: 'Geschwindigkeit umrechnen: km/h, mph, Knoten und Mach erklärt',
+    description: 'Von der Autofahrt bis zur Luftfahrt: Wie Geschwindigkeitseinheiten zusammenhängen, warum Schiffe in Knoten messen und was Mach bedeutet.',
+    date: '2026-06-05',
+    readingTime: '10 Min.',
+    category: 'Geschwindigkeit',
+    content: `## Was ist Geschwindigkeit?
+
+Geschwindigkeit ist das Verhältnis von zurückgelegter Strecke zur dafür benötigten Zeit. So einfach die Definition klingt, so vielfältig sind die Einheiten, in denen Geschwindigkeit ausgedrückt wird. Die Wahl der Einheit hängt dabei stark vom Kontext ab – auf der Straße, im Wasser, in der Luft oder im Weltraum gelten unterschiedliche Konventionen.
+
+## Kilometer pro Stunde (km/h)
+
+In Deutschland und den meisten Ländern der Welt ist km/h die Standardeinheit für Geschwindigkeiten im Straßenverkehr. Ein Fahrzeug, das 100 km/h fährt, legt in einer Stunde eine Strecke von 100 Kilometern zurück.
+
+**Typische Geschwindigkeiten in km/h:**
+- Fußgänger: 4–6 km/h
+- Radfahrer: 15–25 km/h
+- Innerorts: 50 km/h (Tempo-Limit)
+- Autobahn-Richtgeschwindigkeit: 130 km/h
+- ICE-Höchstgeschwindigkeit: 300 km/h
+- Verkehrsflugzeug: 800–900 km/h
+
+## Miles per Hour (mph)
+
+In den USA, Großbritannien und einigen anderen englischsprachigen Ländern wird die Geschwindigkeit in mph angegeben. Eine Meile entspricht 1,609344 Kilometern, daher gilt:
+
+**1 mph = 1,609344 km/h**
+
+Oder umgekehrt: **1 km/h = 0,621371 mph**
+
+Eine praktische Faustregel: Um mph grob in km/h umzurechnen, multipliziere mit 1,6. Also 60 mph ≈ 96 km/h (genau: 96,56 km/h). Die amerikanische Autobahngeschwindigkeit von 65 mph entspricht etwa 105 km/h.
+
+Interessanterweise verwenden auch in Großbritannien die meisten Autos mph auf dem Tacho, obwohl das Land offiziell metrisch ist. Geschwindigkeitsbegrenzungen werden in mph angegeben, aber Entfernungen auf Autobahnschildern erscheinen teilweise in Meilen und teilweise in Kilometern – ein typischer britischer Kompromiss.
+
+## Knoten: Die Einheit der Seefahrt
+
+Schiffe und Flugzeuge messen ihre Geschwindigkeit in Knoten (kn oder kt). Ein Knoten entspricht einer Seemeile pro Stunde:
+
+**1 Knoten = 1,852 km/h = 1,15078 mph**
+
+Der Name „Knoten" stammt aus der traditionellen Seefahrt. Um die Geschwindigkeit eines Schiffes zu messen, warf man ein sogenanntes Logscheit – ein Holzbrett an einer Leine – ins Wasser. Die Leine hatte in gleichmäßigen Abständen Knoten. Man zählte, wie viele Knoten in einer bestimmten Zeitspanne (gemessen mit einer Sanduhr) abgelaufen waren. Jeder Knoten auf der Leine entsprach einer Seemeile pro Stunde.
+
+Die Seemeile selbst hat einen geographischen Bezug: Sie entspricht einer Bogenminute des Breitengrads, also 1/60 eines Breitengrads, was etwa 1.852 Metern entspricht. Das macht die Navigation auf See besonders praktisch – auf einer Seekarte kann man Distanzen direkt mit dem Breitengrad-Maßstab messen.
+
+**Typische Geschwindigkeiten in Knoten:**
+- Segelboot: 5–15 kn
+- Containerschiff: 20–25 kn
+- Kriegsschiff: 30+ kn
+- Schnellfähre: 35–45 kn
+- Verkehrsflugzeug: 450–530 kn (Reisegeschwindigkeit)
+
+## Mach: Die Schallgeschwindigkeit als Referenz
+
+Die Mach-Zahl gibt die Geschwindigkeit als Vielfaches der Schallgeschwindigkeit an. Sie ist nach dem österreichischen Physiker Ernst Mach (1838–1916) benannt.
+
+**Mach 1 = Schallgeschwindigkeit ≈ 1.235 km/h** (auf Meereshöhe bei 20 °C)
+
+Allerdings variiert die Schallgeschwindigkeit je nach Temperatur und Luftdruck erheblich. In der typischen Reiseflughöhe von 10.000 bis 12.000 Metern, wo die Temperatur bei etwa –56 °C liegt, beträgt die Schallgeschwindigkeit nur noch etwa 1.062 km/h. Daher fliegt ein Verkehrsflugzeug mit 900 km/h dort bereits mit Mach 0,85.
+
+**Geschwindigkeitsbereiche:**
+- Unterschall: < Mach 1
+- Transsonisch: Mach 0,8–1,2
+- Überschall: Mach 1–5
+- Hyperschall: > Mach 5
+
+Die berühmte Concorde erreichte Mach 2,04 (etwa 2.180 km/h). Moderne Kampfflugzeuge wie die F-22 Raptor erreichen Mach 2,25. Das schnellste bemannte Flugzeug, die X-15, erreichte 1967 Mach 6,7 (7.274 km/h).
+
+## Meter pro Sekunde (m/s): Die SI-Einheit
+
+In der Physik und Wissenschaft wird Geschwindigkeit in Meter pro Sekunde angegeben – der offiziellen SI-Einheit.
+
+**1 m/s = 3,6 km/h**
+
+Diese Umrechnung ist einfach zu merken: Man multipliziert m/s mit 3,6, um km/h zu erhalten. Oder umgekehrt: km/h durch 3,6 ergibt m/s.
+
+**Beispiele:**
+- Lichtgeschwindigkeit: 299.792.458 m/s (exakt, da definiert)
+- Schall: ca. 343 m/s (bei 20 °C)
+- Usain Bolts Rekord: 10,44 m/s (37,58 km/h)
+- Fallgeschwindigkeit eines Regentropfens: ca. 9 m/s
+
+## Praktische Umrechnungsformeln
+
+Für den Alltag die wichtigsten Umrechnungen auf einen Blick:
+
+- **km/h → mph:** × 0,621 (oder ÷ 1,609)
+- **mph → km/h:** × 1,609
+- **km/h → Knoten:** × 0,54 (oder ÷ 1,852)
+- **km/h → m/s:** ÷ 3,6
+- **m/s → km/h:** × 3,6
+
+## Kuriose Geschwindigkeitsrekorde
+
+- Schnellstes Landfahrzeug: ThrustSSC – 1.228 km/h (1997), überschallschnell
+- Schnellstes Wasserfahrzeug: Spirit of Australia – 511 km/h (1978)
+- Schnellster Mensch: Usain Bolt – 44,72 km/h (Spitzengeschwindigkeit)
+- Schnellstes Tier: Wanderfalke – 389 km/h im Sturzflug
+- ISS-Orbitalgeschwindigkeit: 27.600 km/h
+- Schnellstes von Menschen gebautes Objekt: Parker Solar Probe – 692.000 km/h
+
+## Fazit
+
+Die Vielfalt der Geschwindigkeitseinheiten spiegelt die unterschiedlichen Anwendungsbereiche wider. Ob km/h auf der Autobahn, Knoten auf hoher See, Mach in der Luftfahrt oder m/s in der Physik – jede Einheit hat ihren Sinn und ihre Geschichte. Das Verständnis dieser Zusammenhänge hilft nicht nur bei der Umrechnung, sondern auch beim Verständnis technischer und wissenschaftlicher Texte.`
+  },
+  {
+    slug: 'datenspeicher-bits-bytes-erklaert',
+    title: 'Bits, Bytes, Megabyte & Co.: Datenspeicher einfach erklärt',
+    description: 'Was ist der Unterschied zwischen MB und MiB? Warum zeigt die Festplatte weniger Speicher an als angegeben? Alles über digitale Speichereinheiten.',
+    date: '2026-06-06',
+    readingTime: '11 Min.',
+    category: 'Datengrößen',
+    content: `## Warum hat meine 1-TB-Festplatte nur 931 GB?
+
+Wenn du eine neue Festplatte oder SSD mit „1 Terabyte" kaufst, zeigt dein Computer nur etwa 931 GB an. Ist das Betrug? Nein – es liegt an zwei verschiedenen Definitionen von „Kilo", „Mega" und „Giga" in der Informatik. Und genau diese Verwirrung wollen wir in diesem Artikel aufklären.
+
+## Die Grundlagen: Bit und Byte
+
+### Das Bit
+
+Das Bit (binary digit) ist die kleinste Informationseinheit in der Informatik. Es kann genau zwei Zustände annehmen: 0 oder 1, An oder Aus, Wahr oder Falsch. Alle digitalen Informationen – Texte, Bilder, Videos, Programme – werden letztlich als Folge von Bits gespeichert und verarbeitet.
+
+### Das Byte
+
+Ein Byte besteht aus 8 Bits. Mit 8 Bits können 2⁸ = 256 verschiedene Werte dargestellt werden (0 bis 255). Ein Byte kann zum Beispiel:
+- Einen Buchstaben im ASCII-Zeichensatz speichern
+- Eine Zahl von 0 bis 255 darstellen
+- Einen Farbwert (z. B. Rot = 0–255) kodieren
+
+## Das Dezimal-System (SI-Präfixe): KB, MB, GB, TB
+
+Festplatten-Hersteller und das Internationale Einheitensystem verwenden die bekannten SI-Präfixe:
+
+- 1 Kilobyte (KB) = 1.000 Bytes
+- 1 Megabyte (MB) = 1.000 KB = 1.000.000 Bytes
+- 1 Gigabyte (GB) = 1.000 MB = 1.000.000.000 Bytes
+- 1 Terabyte (TB) = 1.000 GB = 1.000.000.000.000 Bytes
+- 1 Petabyte (PB) = 1.000 TB
+
+Diese Definition folgt der üblichen dezimalen Logik: Kilo = Tausend, Mega = Million, Giga = Milliarde.
+
+## Das Binär-System (IEC-Präfixe): KiB, MiB, GiB, TiB
+
+Computer rechnen im Binärsystem (Basis 2). Historisch wurden deshalb Potenzen von 2 verwendet:
+
+- 1 Kibibyte (KiB) = 1.024 Bytes (2¹⁰)
+- 1 Mebibyte (MiB) = 1.024 KiB = 1.048.576 Bytes (2²⁰)
+- 1 Gibibyte (GiB) = 1.024 MiB = 1.073.741.824 Bytes (2³⁰)
+- 1 Tebibyte (TiB) = 1.024 GiB = 1.099.511.627.776 Bytes (2⁴⁰)
+
+Diese IEC-Präfixe (kibi, mebi, gibi, tebi) wurden 1998 eingeführt, um die Verwirrung zu beseitigen. Das „bi" steht für „binary" (binär).
+
+## Warum die Diskrepanz beim Festplattenspeicher?
+
+Jetzt wird das Festplatten-Mysterium klar:
+
+Der Hersteller bewirbt: **1 TB = 1.000.000.000.000 Bytes** (dezimal)
+
+Dein Betriebssystem zeigt an: **1.000.000.000.000 ÷ 1.073.741.824 = 931,3 GiB**
+
+Windows zeigt „931 GB" an, meint aber eigentlich 931 GiB. Das Betriebssystem rechnet binär, schreibt aber „GB" statt „GiB" – eine historische Ungenauigkeit, die bis heute fortbesteht.
+
+Bei macOS hat Apple seit OS X 10.6 (2009) auf die dezimale Definition umgestellt: Dort zeigt eine 1-TB-Festplatte tatsächlich „1 TB" an.
+
+## Datenübertragung: Bits pro Sekunde
+
+Bei Internetgeschwindigkeiten werden **Bits** pro Sekunde verwendet, nicht Bytes:
+
+- 1 Kbit/s = 1.000 Bits/s
+- 1 Mbit/s = 1.000.000 Bits/s
+- 1 Gbit/s = 1.000.000.000 Bits/s
+
+**Wichtig:** Um von Mbit/s auf MByte/s umzurechnen, teilt man durch 8 (da 1 Byte = 8 Bits).
+
+Ein Internetanschluss mit 100 Mbit/s liefert also maximal etwa 12,5 MByte/s. Ein 1-Gbit/s-Anschluss schafft theoretisch bis zu 125 MByte/s.
+
+Das erklärt, warum Downloads langsamer erscheinen als die beworbene Geschwindigkeit: Der Provider gibt Mbit/s an, der Browser zeigt aber MB/s an.
+
+## Wie viel Speicher brauche ich wirklich?
+
+### Typische Dateigrößen
+
+- Eine Textseite (reiner Text): ca. 2 KB
+- Ein hochauflösendes Foto (JPEG): 3–10 MB
+- Ein RAW-Foto: 25–50 MB
+- Ein Musikstück (MP3, 320 kbit/s): 7–10 MB
+- Ein Musikstück (FLAC, verlustfrei): 25–40 MB
+- Ein HD-Film (1080p, 2 Stunden): 4–8 GB
+- Ein 4K-Film (2 Stunden): 15–30 GB
+- Windows 11 Installation: ca. 64 GB
+- Ein modernes AAA-Spiel: 50–150 GB
+
+### Speicherempfehlungen
+
+- **Smartphone:** 128–256 GB für die meisten Nutzer
+- **Laptop/PC (SSD):** 512 GB – 1 TB
+- **Externe Backup-Festplatte:** 2–4 TB
+- **NAS für Familien:** 4–8 TB
+
+## Die Zukunft: Jenseits des Terabyte
+
+Die Datenmengen wachsen exponentiell. Bereits heute gibt es:
+- **Petabyte (PB):** 1.000 TB – Speicherkapazität großer Rechenzentren
+- **Exabyte (EB):** 1.000 PB – Das weltweite Internetdatenvolumen pro Monat liegt bei mehreren Hundert Exabyte
+- **Zettabyte (ZB):** 1.000 EB – Das gesamte global gespeicherte Datenvolumen wird für 2025 auf über 180 ZB geschätzt
+- **Yottabyte (YB):** 1.000 ZB – Noch rein theoretisch
+
+## Fazit
+
+Die Welt der digitalen Speichereinheiten ist komplexer als sie auf den ersten Blick scheint. Der Unterschied zwischen dezimalen und binären Präfixen, die Verwechslung von Bits und Bytes und die historisch gewachsenen Konventionen sorgen regelmäßig für Verwirrung. Wer die Grundlagen versteht, kann Speicherkapazitäten, Datenübertragungsraten und Dateigrößen besser einschätzen und vergleichen.`
+  },
+  {
+    slug: 'druck-bar-psi-pascal-atmosphaere',
+    title: 'Druckeinheiten verstehen: Bar, PSI, Pascal und Atmosphäre',
+    description: 'Warum Reifen in Bar, Wetter in hPa und US-Druckmesser in PSI messen. Ein umfassender Leitfaden zu Druckeinheiten und ihrer Umrechnung.',
+    date: '2026-06-07',
+    readingTime: '10 Min.',
+    category: 'Druck',
+    content: `## Was ist Druck?
+
+Druck ist die Kraft, die auf eine bestimmte Fläche wirkt. Die physikalische Formel lautet: p = F/A (Druck = Kraft geteilt durch Fläche). Stell dir vor, du stehst auf Schnee: Mit normalen Schuhen sinkst du ein, weil dein Gewicht auf einer kleinen Fläche lastet. Mit Schneeschuhen verteilt sich die gleiche Kraft auf eine viel größere Fläche – der Druck sinkt, und du sinkst weniger tief ein.
+
+## Die wichtigsten Druckeinheiten
+
+### Pascal (Pa) – Die SI-Einheit
+
+Das Pascal ist die offizielle SI-Einheit des Drucks, benannt nach dem französischen Mathematiker und Physiker Blaise Pascal (1623–1662). Ein Pascal ist definiert als ein Newton pro Quadratmeter:
+
+**1 Pa = 1 N/m²**
+
+Das Pascal ist allerdings eine sehr kleine Einheit. Der normale Luftdruck auf Meereshöhe beträgt etwa 101.325 Pa. Daher werden in der Praxis meist Vielfache verwendet:
+- **Hektopascal (hPa):** 1 hPa = 100 Pa – Standardeinheit in der Meteorologie
+- **Kilopascal (kPa):** 1 kPa = 1.000 Pa – In der Technik verbreitet
+- **Megapascal (MPa):** 1 MPa = 1.000.000 Pa – Für hohe Drücke (Materialwissenschaft)
+
+### Bar – Der praktische Allrounder
+
+Das Bar wurde 1909 vom norwegischen Meteorologen Vilhelm Bjerknes eingeführt. Es ist keine SI-Einheit, aber in vielen Bereichen der Standard:
+
+**1 bar = 100.000 Pa = 100 kPa**
+
+Der normale Luftdruck beträgt etwa 1,01325 bar – also fast genau 1 bar. Diese praktische Nähe zum Atmosphärendruck hat das Bar populär gemacht.
+
+**Typische Drücke in bar:**
+- Reifendruck PKW: 2,0–2,5 bar
+- Reifendruck Fahrrad: 3–8 bar (je nach Reifentyp)
+- Haushalts-Wasserleitung: 3–6 bar
+- Espressomaschine: 9–15 bar
+- Tauchflasche: 200–300 bar
+- Hochdruckreiniger: 100–200 bar
+
+### PSI – Der amerikanische Standard
+
+PSI steht für „Pounds per Square Inch" – Pfund pro Quadratzoll. Es ist die in den USA, Kanada und teilweise in Großbritannien übliche Druckeinheit:
+
+**1 PSI = 6.894,76 Pa = 0,0689 bar**
+
+Oder umgekehrt: **1 bar = 14,5038 PSI**
+
+Wenn an einer US-amerikanischen Tankstelle „32 PSI" für den Reifendruck empfohlen wird, entspricht das 2,21 bar – ein typischer Wert für einen PKW-Reifen.
+
+### Atmosphäre (atm) – Der historische Referenzwert
+
+Die physikalische Atmosphäre ist definiert als:
+
+**1 atm = 101.325 Pa = 1,01325 bar = 14,696 PSI**
+
+Sie entspricht dem mittleren Luftdruck auf Meereshöhe bei 15 °C und dient als Referenzwert in vielen wissenschaftlichen Kontexten.
+
+In der Tauchmedizin wird die Atmosphäre häufig verwendet: In 10 Metern Wassertiefe herrscht ein Druck von etwa 2 atm (1 atm Luftdruck + 1 atm Wasserdruck). Pro 10 Meter Tiefe kommt ungefähr eine Atmosphäre hinzu.
+
+### Torr und mmHg – Medizin und Meteorologie
+
+Das Torr ist nach Evangelista Torricelli benannt, der 1644 das erste Barometer erfand:
+
+**1 Torr = 1 mmHg = 133,322 Pa**
+
+In der Medizin wird der Blutdruck traditionell in mmHg (Millimeter Quecksilbersäule) gemessen. Ein gesunder Blutdruck von „120/80" bedeutet 120 mmHg systolisch und 80 mmHg diastolisch. In SI-Einheiten wären das 16,0/10,7 kPa – weniger intuitiv für die ärztliche Praxis.
+
+## Druck in der Meteorologie
+
+Wetterkarten zeigen den Luftdruck in **Hektopascal (hPa)**. Der mittlere Luftdruck auf Meereshöhe beträgt 1.013,25 hPa. Hochdruckgebiete haben typischerweise über 1.020 hPa, Tiefdruckgebiete unter 1.000 hPa.
+
+Der niedrigste je auf der Erde gemessene Luftdruck war 870 hPa im Taifun Tip (1979). Der höchste war 1.083,8 hPa in Agata, Sibirien (1968).
+
+Früher wurde in der Meteorologie das Millibar (mbar) verwendet. Glücklicherweise sind 1 mbar und 1 hPa identisch, was die Umstellung 1984 erleichterte.
+
+## Reifendruck: Ein alltägliches Thema
+
+Der richtige Reifendruck ist entscheidend für Sicherheit, Kraftstoffverbrauch und Reifenverschleiß:
+
+- **Zu niedriger Druck:** Höherer Verschleiß an den Reifenaußenseiten, mehr Rollwiderstand (bis zu 5 % höherer Kraftstoffverbrauch), längerer Bremsweg, Überhitzungsgefahr.
+- **Zu hoher Druck:** Weniger Auflagefläche, schlechtere Haftung bei Nässe, erhöhter Verschleiß in der Reifenmitte, härteres Fahrgefühl.
+
+**Umrechnungstabelle für Reifendruck:**
+
+| bar | PSI | kPa |
+|-----|-----|-----|
+| 1,8 | 26 | 180 |
+| 2,0 | 29 | 200 |
+| 2,2 | 32 | 220 |
+| 2,5 | 36 | 250 |
+| 3,0 | 44 | 300 |
+
+## Fazit
+
+Druckeinheiten sind ein faszinierendes Beispiel dafür, wie unterschiedliche Anwendungsbereiche verschiedene Maßeinheiten hervorgebracht haben. Ob Bar am Reifenventil, PSI an der amerikanischen Tankstelle, hPa im Wetterbericht oder mmHg beim Arzt – das Verständnis der Zusammenhänge erleichtert den Alltag und schützt vor Fehlern.`
+  },
+  {
+    slug: 'leistung-ps-kw-watt-erklaert',
+    title: 'PS, kW und Watt: Was bedeuten Leistungseinheiten wirklich?',
+    description: 'Warum hat mein Auto 150 PS, aber 110 kW auf dem Fahrzeugschein? Die Geschichte der Pferdestärke und wie Leistungseinheiten zusammenhängen.',
+    date: '2026-06-09',
+    readingTime: '10 Min.',
+    category: 'Leistung',
+    content: `## Die Pferdestärke: Eine Einheit mit Geschichte
+
+James Watt, der schottische Erfinder und Ingenieur, brauchte Ende des 18. Jahrhunderts ein Verkaufsargument für seine verbesserte Dampfmaschine. Er wollte potenziellen Käufern zeigen, wie viele Pferde seine Maschine ersetzen konnte. Also definierte er die Pferdestärke als die Leistung, die ein durchschnittliches Arbeitspferd über einen längeren Zeitraum erbringen kann.
+
+Watts Definition: **1 PS = 75 Kilogrammeter pro Sekunde** – das entspricht dem Anheben einer Last von 75 kg um einen Meter in einer Sekunde.
+
+Interessanterweise überschätzte Watt die tatsächliche Dauerleistung eines Pferdes bewusst leicht. Ein reales Pferd kann kurzzeitig etwa 15 PS leisten (beim Anziehen einer schweren Last), erreicht im Dauerbetrieb aber nur etwa 0,7 PS. Watts großzügige Definition war also ein cleverer Marketing-Trick: Seine Dampfmaschinen schnitten im Vergleich zu Pferden besonders gut ab.
+
+## Die verschiedenen Pferdestärken
+
+Ja, es gibt tatsächlich mehrere Definitionen der Pferdestärke:
+
+### Metrische Pferdestärke (PS)
+- 1 PS = 75 kp·m/s = 735,49875 Watt
+- Verwendet in Deutschland, Österreich, Schweiz und den meisten europäischen Ländern
+
+### Mechanische Pferdestärke (HP – Horsepower)
+- 1 HP = 550 ft·lbf/s = 745,7 Watt
+- Verwendet in den USA und Großbritannien
+
+### Elektrische Pferdestärke
+- 1 HP (elektrisch) = 746 Watt (exakt)
+- Verwendet für Elektromotoren
+
+Der Unterschied zwischen PS und HP ist gering (etwa 1,4 %), kann aber bei großen Motoren relevant sein: Ein Motor mit 500 HP hat 507 PS. Bei Autovergleichen zwischen europäischen und amerikanischen Modellen sollte man daher genau hinschauen.
+
+## Watt und Kilowatt: Die SI-Einheiten
+
+Das Watt ist die offizielle SI-Einheit der Leistung, benannt nach James Watt selbst (eine Ironie, wenn man bedenkt, dass er die konkurrierende Einheit PS erfand).
+
+**1 Watt = 1 Joule pro Sekunde = 1 kg·m²/s³**
+
+In der Praxis werden Vielfache verwendet:
+- **Milliwatt (mW):** Für Elektronik und Sensoren
+- **Watt (W):** Für Haushaltsgeräte (Glühbirne: 60 W, LED: 8 W)
+- **Kilowatt (kW):** Für Motoren und größere Geräte (1 kW = 1.000 W)
+- **Megawatt (MW):** Für Kraftwerke (Windkraftanlage: 2–5 MW)
+- **Gigawatt (GW):** Für nationale Stromnetze
+
+## PS vs. kW: Warum stehen beide auf dem Fahrzeugschein?
+
+Seit 2010 muss in der EU die Motorleistung offiziell in Kilowatt angegeben werden. Im Alltag wird aber weiterhin PS verwendet, weil die Zahl „größer klingt" und die meisten Menschen damit aufgewachsen sind.
+
+**Die Umrechnung:**
+- **1 kW = 1,35962 PS** (gerundet: 1,36)
+- **1 PS = 0,73550 kW** (gerundet: 0,736)
+
+**Beispiele:**
+| PS | kW | Fahrzeugtyp |
+|----|----|----|
+| 65 | 48 | Kleinwagen |
+| 110 | 81 | Kompaktwagen |
+| 150 | 110 | Mittelklasse |
+| 250 | 184 | Sportwagen |
+| 500 | 368 | Supersportwagen |
+| 1.000 | 736 | Hypercar |
+
+## Leistung vs. Drehmoment
+
+Leistung und Drehmoment werden oft verwechselt, sind aber unterschiedliche physikalische Größen:
+
+- **Drehmoment (Nm):** Die Kraft, mit der der Motor dreht. Bestimmt die Beschleunigungskraft, besonders aus dem Stand.
+- **Leistung (kW/PS):** Drehmoment multipliziert mit Drehzahl. Bestimmt die Höchstgeschwindigkeit und die Beschleunigung bei hohen Geschwindigkeiten.
+
+Formel: **P (kW) = M (Nm) × n (min⁻¹) / 9.549**
+
+Ein Dieselmotor hat typischerweise hohes Drehmoment bei niedrigen Drehzahlen (viel Zugkraft), während ein Benzinmotor seine Leistung bei höheren Drehzahlen entfaltet. Elektromotoren haben ihr volles Drehmoment sofort ab Drehzahl 0 – daher die beeindruckende Beschleunigung von Elektroautos.
+
+## Leistung im Haushalt
+
+Auch abseits des Autos begegnen uns Leistungsangaben ständig:
+
+- **LED-Lampe:** 8–12 W (ersetzt 60–75 W Glühbirne)
+- **Smartphone-Ladegerät:** 5–65 W (je nach Schnellladung)
+- **Staubsauger:** 600–2.000 W
+- **Herd (eine Platte):** 1.000–3.000 W
+- **Waschmaschine:** 1.800–2.500 W
+- **Durchlauferhitzer:** 18.000–27.000 W (18–27 kW)
+- **Elektroauto-Wallbox:** 3.700–22.000 W (3,7–22 kW)
+
+## Kilowattstunde: Leistung × Zeit
+
+Die Kilowattstunde (kWh) ist keine Leistungseinheit, sondern eine Energieeinheit: Sie gibt an, wie viel Energie ein Gerät mit 1 kW Leistung in einer Stunde verbraucht.
+
+**Beispiel:** Ein 2.000-W-Staubsauger, der 30 Minuten läuft, verbraucht: 2 kW × 0,5 h = 1 kWh. Bei einem Strompreis von 0,35 € pro kWh kostet das 35 Cent.
+
+## Fazit
+
+Die Vielfalt der Leistungseinheiten hat historische Gründe: PS für den emotionalen Bezug zum Auto, kW für die offizielle Norm, Watt für Haushalt und Physik. Wer die Zusammenhänge kennt, kann Angaben richtig einordnen und Vergleiche zwischen verschiedenen Ländern und Systemen anstellen.`
+  },
+  {
+    slug: 'masseinheiten-geschichte-entwicklung',
+    title: 'Die Geschichte der Maßeinheiten: Vom Körpermaß zum Quantenstandard',
+    description: 'Wie die Menschheit vom Ellen-Maß und Fußlänge zu atomgenau definierten SI-Einheiten kam – eine faszinierende Reise durch 5.000 Jahre Messgeschichte.',
+    date: '2026-06-11',
+    readingTime: '12 Min.',
+    category: 'Grundlagen',
+    content: `## Die Anfänge: Der menschliche Körper als Maßstab
+
+Die ältesten bekannten Maßeinheiten basieren auf dem menschlichen Körper. Das ist logisch – der eigene Körper ist immer verfügbar, braucht keine Werkzeuge und ist intuitiv verständlich. Bereits die alten Ägypter verwendeten um 3000 v. Chr. die königliche Elle (Meh), gemessen vom Ellbogen bis zur Fingerspitze des Pharaos.
+
+**Antike Körpermaße:**
+- **Fingerbreit (Digit):** Die Breite eines Fingers – etwa 1,9 cm
+- **Handbreit (Palm):** Vier Fingerbreiten – etwa 7,5 cm
+- **Spanne:** Von der Daumenspitze bis zur Spitze des kleinen Fingers bei gespreizter Hand – etwa 23 cm
+- **Elle (Cubit):** Vom Ellbogen bis zur Fingerspitze – etwa 45–52 cm
+- **Fuß (Foot):** Fußlänge – etwa 25–33 cm
+- **Schritt (Pace):** Ein Doppelschritt – etwa 1,5 m
+
+Das Problem dieser Definition liegt auf der Hand: Jeder Mensch hat andere Körpermaße. Die Elle des Pharaos war eine andere als die des Händlers. Um dem entgegenzuwirken, schufen die Ägypter den „Königlichen Ellenstab" – einen standardisierten Maßstab aus Granit, der im Tempel von Karnak aufbewahrt wurde. Alle Kopien mussten bei Vollmond mit dem Original verglichen werden – eine frühe Form der Kalibrierung.
+
+## Das römische System
+
+Die Römer übernahmen und verfeinerten das griechische Maßsystem. Der römische Fuß (pes) betrug etwa 29,6 cm. Ein Passus (Doppelschritt) war 5 Fuß lang, und 1.000 Passus ergaben eine Milia (Meile) – die Mille Passuum, wörtlich „tausend Schritte", woraus sich das Wort „Meile" ableitet.
+
+Das römische Gewichtssystem basierte auf der Libra (Pfund), die etwa 327 Gramm wog. Die Abkürzung „lb" für Pfund und das „£"-Zeichen für das britische Pfund Sterling leiten sich direkt von der lateinischen Libra ab.
+
+## Das mittelalterliche Chaos
+
+Im Mittelalter existierten in Europa Hunderte verschiedener Maßsysteme nebeneinander. Allein im Heiligen Römischen Reich Deutscher Nation gab es geschätzt über 300 verschiedene Fußmaße und ebenso viele Pfund-Definitionen.
+
+Der Hamburger Fuß (28,66 cm) war anders als der Wiener Fuß (31,61 cm), der Pariser Fuß (32,48 cm) oder der Rheinische Fuß (31,39 cm). Ein „Pfund" Mehl in Frankfurt war eine andere Menge als ein „Pfund" in München.
+
+Dieses Chaos war nicht nur unpraktisch, sondern auch ein Instrument der Macht: Lokale Herrscher profitierten von eigenen Maßen, weil sie beim Warenhandel Zölle und Abgaben manipulieren konnten.
+
+## Die Französische Revolution und das metrische System
+
+Die Idee eines universellen, rationalen Maßsystems entstand in der Aufklärung. 1790, während der Französischen Revolution, beauftragte die Nationalversammlung die Académie des Sciences mit der Entwicklung eines neuen Systems.
+
+Die Grundidee war bestechend einfach:
+- Der **Meter** als 1/10.000.000 der Entfernung vom Nordpol zum Äquator
+- Der **Liter** als das Volumen eines Würfels mit 10 cm Seitenlänge
+- Das **Kilogramm** als die Masse eines Liters Wasser bei 4 °C
+
+1799 wurden die ersten Prototypen aus Platin hergestellt und in Paris aufbewahrt. Napoleon verbreitete das metrische System in den von ihm eroberten Gebieten. Nach seinem Sturz kehrten einige Länder kurzzeitig zu alten Maßen zurück, aber die Vorteile des dezimalen Systems waren so offensichtlich, dass es sich langfristig durchsetzte.
+
+## Die Meterkonvention und das BIPM
+
+1875 unterzeichneten 17 Staaten die Meterkonvention und gründeten das Bureau International des Poids et Mesures (BIPM) in Sèvres bei Paris. Dort werden bis heute die internationalen Standards verwaltet.
+
+Ein Meilen-Stein war die Herstellung des Urkilogramms – ein Zylinder aus einer Platin-Iridium-Legierung, der als globale Referenz für das Kilogramm diente. Dieser Zylinder, liebevoll „Le Grand K" genannt, wurde in einem dreifach gesicherten Tresor aufbewahrt und nur alle 40 Jahre zur Kalibrierung hervorgeholt.
+
+## Die moderne Revolution: Naturkonstanten statt Artefakte
+
+Das Problem physischer Referenzobjekte: Sie verändern sich. Messungen in den 1990er-Jahren zeigten, dass das Urkilogramm in Paris etwa 50 Mikrogramm leichter geworden war als seine offiziellen Kopien. War das Original leichter geworden, oder waren die Kopien schwerer? Die Frage war philosophisch unbeantwortbar.
+
+Die Lösung: **Definition über Naturkonstanten.** Am 20. Mai 2019 – dem Weltmetrologietag – traten die neuen Definitionen aller sieben SI-Basiseinheiten in Kraft:
+
+1. **Meter:** Definiert über die Lichtgeschwindigkeit (299.792.458 m/s – exakt)
+2. **Kilogramm:** Definiert über die Planck-Konstante (6,62607015 × 10⁻³⁴ J·s – exakt)
+3. **Sekunde:** Definiert über die Caesium-133-Frequenz (9.192.631.770 Hz – exakt)
+4. **Ampere:** Definiert über die Elementarladung (1,602176634 × 10⁻¹⁹ C – exakt)
+5. **Kelvin:** Definiert über die Boltzmann-Konstante
+6. **Mol:** Definiert über die Avogadro-Konstante
+7. **Candela:** Definiert über die Lichtstärke
+
+Diese Definitionen sind revolutionär: Jedes Labor auf der Welt kann theoretisch seine eigenen Referenzen herstellen, ohne auf ein physisches Artefakt in Paris angewiesen zu sein.
+
+## Was die Zukunft bringt
+
+Die Metrologie entwickelt sich ständig weiter. Aktuelle Forschungsschwerpunkte sind:
+
+- **Optische Atomuhren:** Sie sind 100-mal genauer als Caesium-Uhren und könnten die Sekunde neu definieren.
+- **Quantensensoren:** Ermöglichen Druckmessungen ohne mechanische Bauteile.
+- **Chip-basierte Kalibrierung:** Miniaturisierte Messstandards für den industriellen Einsatz.
+
+## Fazit
+
+Von der Elle des Pharaos bis zur Planck-Konstante – die Geschichte der Maßeinheiten ist eine Geschichte des menschlichen Strebens nach Genauigkeit und Universalität. Jede Epoche hat ihre eigenen Lösungen gefunden, und jede Lösung spiegelt den technologischen und wissenschaftlichen Stand ihrer Zeit wider. Heute sind unsere Maßeinheiten auf Naturkonstanten begründet und damit universell gültig – eine Leistung, die Jahrtausende menschlicher Zivilisation widerspiegelt.`
+  },
+  {
+    slug: 'umrechnen-beim-online-shopping',
+    title: 'Richtig umrechnen beim Online-Shopping: Größen, Gewichte und Währungen',
+    description: 'Praktische Tipps für internationale Bestellungen: Wie du Kleidergrößen, Schuhgrößen, Gewichtsangaben und Preise korrekt umrechnest.',
+    date: '2026-06-13',
+    readingTime: '10 Min.',
+    category: 'Praxis',
+    content: `## Die Herausforderung: International einkaufen
+
+Online-Shopping kennt keine Grenzen – aber Maßeinheiten schon. Wer bei US-amerikanischen, britischen oder asiatischen Shops bestellt, steht regelmäßig vor Umrechnungsproblemen: Ist US-Größe 8 dasselbe wie EU 38? Wie schwer sind 3 lbs? Und was kostet das wirklich in Euro?
+
+Dieser Praxis-Guide hilft dir, die häufigsten Fallen zu vermeiden und immer die richtige Größe, das richtige Gewicht und den echten Preis zu finden.
+
+## Kleidergrößen: EU, US und UK im Vergleich
+
+### Damengrößen
+
+Die größte Verwirrung herrscht bei Damengrößen, weil jedes Land ein eigenes System verwendet:
+
+| EU | US | UK | International |
+|----|----|----|------|
+| 34 | 2 | 6 | XS |
+| 36 | 4 | 8 | S |
+| 38 | 6 | 10 | M |
+| 40 | 8 | 12 | M/L |
+| 42 | 10 | 14 | L |
+| 44 | 12 | 16 | XL |
+| 46 | 14 | 18 | XXL |
+
+**Wichtig:** Diese Tabelle ist ein Richtwert. Tatsächlich variieren die Größen zwischen Herstellern erheblich. Ein „Medium" bei Zara fällt anders aus als ein „Medium" bei H&M. Dieses Phänomen nennt sich „Vanity Sizing" – viele Marken schneiden ihre Kleidung größer, damit sich Kunden besser fühlen, wenn sie eine kleinere Größe tragen können.
+
+**Tipp:** Achte beim internationalen Shopping weniger auf die Größenbezeichnung und mehr auf die **Körpermaße in Zentimetern** (Brustumfang, Taillenumfang, Hüftumfang), die seriöse Shops in ihrer Größentabelle angeben. Miss dich mit einem flexiblen Maßband und vergleiche die Werte.
+
+### Herrengrößen
+
+Bei Herrenoberbekleidung sind die Unterschiede kleiner, aber dennoch vorhanden:
+
+| EU | US/UK | International |
+|----|-------|------|
+| 44 | 34 | XS |
+| 46 | 36 | S |
+| 48 | 38 | M |
+| 50 | 40 | L |
+| 52 | 42 | XL |
+| 54 | 44 | XXL |
+
+Bei Herrenhemden wird international oft die Kragenweite in Zoll angegeben. Die Faustregel: Kragenweite in cm ÷ 2,54 = Kragenweite in Zoll. Ein europäisches Hemd mit Kragenweite 40 cm entspricht also 15¾ Zoll (aufgerundet 16).
+
+## Schuhgrößen: Ein besonders kompliziertes Thema
+
+Schuhgrößen sind weltweit unterschiedlich, und die Umrechnung ist nicht linear:
+
+| EU | US Damen | US Herren | UK |
+|----|----------|-----------|-----|
+| 36 | 5.5 | – | 3.5 |
+| 37 | 6.5 | – | 4.5 |
+| 38 | 7.5 | 5.5 | 5.5 |
+| 39 | 8 | 6.5 | 6 |
+| 40 | 9 | 7.5 | 6.5 |
+| 41 | 9.5 | 8 | 7.5 |
+| 42 | 10.5 | 8.5 | 8 |
+| 43 | 11 | 9.5 | 9 |
+| 44 | 12 | 10 | 9.5 |
+| 45 | 13 | 11 | 10.5 |
+
+**Tipp:** Die zuverlässigste Methode ist die Fußlänge in Zentimetern. Stelle dich auf ein Blatt Papier, zeichne die Umrisse deines Fußes nach und miss die Länge von der Ferse bis zur längsten Zehe. Addiere 0,5 cm als Laufzugabe. Viele Online-Shops (besonders Nike, Adidas, ASOS) bieten Größentabellen mit cm-Angaben.
+
+## Gewichtsangaben auf Produkten
+
+### Pounds und Ounces
+
+US-amerikanische Shops geben Gewichte oft in Pounds (lbs) und Ounces (oz) an:
+
+- 1 lb (Pound) = 453,6 g = 0,4536 kg
+- 1 oz (Ounce) = 28,35 g
+- 16 oz = 1 lb
+
+**Praktische Faustregel:** Teile Pounds durch 2 und ziehe 10 % ab: 10 lbs ÷ 2 = 5, minus 10 % = 4,5 kg (genau: 4,536 kg).
+
+### Versandgewicht vs. Produktgewicht
+
+Beim internationalen Versand wird oft das „Volumetrische Gewicht" berechnet. Versandunternehmen wie DHL und FedEx verwenden die Formel: Länge × Breite × Höhe (in cm) ÷ 5.000 = volumetrisches Gewicht in kg. Das höhere von tatsächlichem und volumetrischem Gewicht wird berechnet. Ein leichter, aber sperriger Artikel kann dadurch teurer werden als erwartet.
+
+## Währungsumrechnung: Den echten Preis kennen
+
+### Wechselkurse verstehen
+
+Wechselkurse ändern sich ständig. Der Kurs, den du bei Google siehst (der sogenannte „Mid-Market-Rate" oder Interbankenkurs), ist nicht der Kurs, den du beim Bezahlen bekommst. Banken und Zahlungsdienstleister schlagen Margen auf:
+
+- Kreditkarte: 1,5–3 % Aufschlag
+- PayPal: 3–4 % Aufschlag (wenn PayPal die Umrechnung macht)
+- Banküberweisung: 0,5–2 % Aufschlag
+- Wise/Revolut: 0,3–1 % Aufschlag
+
+**Tipp:** Wähle beim Bezahlen mit Kreditkarte immer die Option „In Landeswährung bezahlen" (z. B. USD), nicht „In Euro umgerechnet". Die sogenannte Dynamic Currency Conversion (DCC) bietet fast immer einen schlechteren Kurs.
+
+### Versteckte Kosten beim Auslandseinkauf
+
+Neben dem Produktpreis und den Versandkosten können anfallen:
+- **Zoll:** Bei Bestellungen außerhalb der EU ab einem Warenwert von 150 € (seit Juli 2021 auch für Bestellungen unter 22 € Einfuhrumsatzsteuer)
+- **Einfuhrumsatzsteuer:** 19 % (in Deutschland) auf den Warenwert inkl. Versand
+- **Bearbeitungsgebühr:** Post/DHL berechnen 6 € Auslagenpauschale für die Zollabwicklung
+
+## Praktische Checkliste für internationales Shopping
+
+1. ✅ Körpermaße in cm kennen (nicht nur die deutsche Größe)
+2. ✅ Größentabelle des Shops prüfen (nicht auf allgemeine Umrechnungstabellen verlassen)
+3. ✅ Bei Schuhen die Fußlänge in cm als Referenz nutzen
+4. ✅ Wechselkurs aktuell prüfen und Gebühren einkalkulieren
+5. ✅ Versandkosten, Zoll und Einfuhrumsatzsteuer berechnen
+6. ✅ Rückgabebedingungen prüfen (internationale Retouren sind oft teuer)
+7. ✅ Bewertungen anderer europäischer Kunden lesen (Hinweise auf Größenabweichungen)
+
+## Fazit
+
+Internationales Online-Shopping bietet eine riesige Auswahl und oft günstigere Preise. Wer die Grundlagen der Umrechnung kennt und die typischen Fallen vermeidet, kann sicher und zufrieden international einkaufen. Die wichtigste Regel: Vertraue nie blind auf Größenbezeichnungen – miss nach und vergleiche Zentimeter-Angaben.`
+  },
 ]
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

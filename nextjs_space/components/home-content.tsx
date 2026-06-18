@@ -11,7 +11,6 @@ import { getSmartSuggestions, getHistory } from '@/lib/local-storage'
 import { FadeIn, SlideIn, Stagger, StaggerItem, HoverLift } from '@/components/ui/animate'
 import { HistoryPanel } from '@/components/history-panel'
 import { CountryPresets } from '@/components/country-presets'
-import { AdBanner } from '@/components/ad-banner'
 import { SiteFooter } from '@/components/site-footer'
 import { PopularConversions, FAQSection } from '@/components/seo-content-section'
 import { popularConversions, homeFAQs } from '@/lib/seo-content'
@@ -120,11 +119,6 @@ export function HomeContent() {
         </section>
       )}
 
-      {/* Ad Banner */}
-      <div className="max-w-[1200px] mx-auto px-4 py-2">
-        <AdBanner slot="home-top" />
-      </div>
-
       {/* All Categories */}
       <section id="alle" className="max-w-[1200px] mx-auto px-4 py-12">
         <FadeIn>
@@ -170,11 +164,6 @@ export function HomeContent() {
 
       {/* Häufige Umrechnungen */}
       <PopularConversions conversions={popularConversions} />
-
-      {/* Ad Banner - Bottom */}
-      <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <AdBanner slot="home-bottom" />
-      </div>
 
       {/* FAQ */}
       <FAQSection faqs={homeFAQs} title="Häufige Fragen zu SmartUmrechnen" />

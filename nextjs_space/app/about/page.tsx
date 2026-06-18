@@ -1,7 +1,7 @@
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import type { Metadata } from 'next'
-import { Calculator, Shield, Zap, Globe, BookOpen, Users } from 'lucide-react'
+import { Calculator, Shield, Zap, Globe, BookOpen, Users, FileCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Über uns – SmartUmrechnen',
@@ -76,11 +76,31 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed text-foreground/90">
               <p>
-                SmartUmrechnen ist ein unabhängiges Projekt aus Deutschland. Unser Anspruch ist es, komplexe Umrechnungen verständlich und zugänglich zu machen – mit sorgfältig recherchierten Daten und einer benutzerfreundlichen Oberfläche.
+                SmartUmrechnen ist ein unabhängiges Projekt aus Deutschland mit dem Ziel, Einheiten-Umrechnung für alle zugänglich, verständlich und zuverlässig zu gestalten. Hinter dem Projekt steht ein kleines Team aus Entwicklern und Fachredakteuren, das besonderen Wert auf Genauigkeit und Benutzerfreundlichkeit legt.
               </p>
               <p>
-                Das Projekt wird als unabhängige Informationsplattform betrieben und kontinuierlich weiterentwickelt. Neue Umrechner, zusätzliche Hintergrundartikel und technische Verbesserungen werden regelmäßig veröffentlicht.
+                Das Projekt wird als unabhängige Informationsplattform betrieben und kontinuierlich weiterentwickelt. Neue Umrechner, zusätzliche Hintergrundartikel und technische Verbesserungen werden regelmäßig veröffentlicht. SmartUmrechnen finanziert sich über Werbung und ist für alle Nutzer kostenlos und ohne Registrierung verfügbar.
               </p>
+            </div>
+          </section>
+
+          {/* Redaktionelle Leitlinien */}
+          <section className="p-6 rounded-xl border border-border bg-card mb-8">
+            <h2 className="font-semibold text-xl mb-4 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-primary" />
+              Redaktionelle Leitlinien
+            </h2>
+            <div className="space-y-4 text-sm leading-relaxed text-foreground/90">
+              <p>
+                Alle Inhalte auf SmartUmrechnen werden nach folgenden Prinzipien erstellt und geprüft:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-2">
+                <li><strong>Quellenbasiert:</strong> Umrechnungsfaktoren stammen ausschließlich aus offiziellen und wissenschaftlich anerkannten Quellen (SI, BIPM, EZB, WHO, ISO).</li>
+                <li><strong>Transparent:</strong> Auf jeder Umrechner-Seite sind die verwendeten Quellen und Standards direkt verlinkt.</li>
+                <li><strong>Aktuell:</strong> Währungskurse werden über die API der Europäischen Zentralbank täglich automatisch aktualisiert.</li>
+                <li><strong>Unabhängig:</strong> Redaktionelle Inhalte werden nicht von Werbepartnern beeinflusst.</li>
+                <li><strong>Verständlich:</strong> Fachbegriffe werden erklärt, historische Hintergründe beleuchtet und praktische Beispiele gegeben.</li>
+              </ul>
             </div>
           </section>
 

@@ -4,7 +4,6 @@ import { getCategoryBySlug, categories, type ConverterCategory } from '@/lib/con
 import { COMPOUND_NAMES, RELATED_CATEGORIES } from '@/lib/constants'
 import { ConverterShell } from '@/components/converter-shell'
 import { ConversionChart } from '@/components/conversion-chart'
-import { AdBanner } from '@/components/ad-banner'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { FadeIn, SlideIn, HoverLift } from '@/components/ui/animate'
@@ -12,7 +11,7 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useState, useCallback } from 'react'
 import { SiteFooter } from '@/components/site-footer'
-import { ExplanationSection, ReferenceTable, FAQSection } from '@/components/seo-content-section'
+import { ExplanationSection, ReferenceTable, FAQSection, SourcesSection } from '@/components/seo-content-section'
 import { seoContentMap } from '@/lib/seo-content'
 
 // Special converters
@@ -76,20 +75,13 @@ export function ConverterPage({ slug }: ConverterPageProps) {
         </>
       )}
 
-      {/* Ad */}
-      <div className="max-w-[1200px] mx-auto px-4 py-6">
-        <AdBanner slot={`converter-${slug}`} />
-      </div>
-
       {/* FAQ */}
       {seoContentMap[slug]?.faqs && (
         <FAQSection faqs={seoContentMap[slug].faqs} />
       )}
 
-      {/* Ad - Bottom */}
-      <div className="max-w-[1200px] mx-auto px-4 py-4">
-        <AdBanner slot={`converter-${slug}-bottom`} />
-      </div>
+      {/* Quellenverweise */}
+      <SourcesSection slug={slug} />
 
       {/* Related Converters */}
       <section className="max-w-[1200px] mx-auto px-4 py-8 pb-16">
